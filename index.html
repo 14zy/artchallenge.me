@@ -8,11 +8,11 @@
     <meta name="description" content="Try to guess 10 painters in a row and defeat your friends!">
     <meta property="og:description" content="Try to guess 10 painters in a row and defeat your friends!" />
     <link rel="shortcut icon" href="favicon.ico">
-    <link rel="image_src" href="http://artchallenge.ru/art-challenge-logo.png">
+    <link rel="image_src" href="http://artchallenge.me/art-challenge-logo.png">
     <title>Art Challenge - Game on Knowledge of Popular Painters</title>
     <meta property="og:title" content="Art Challenge - Game on Knowledge of Popular Painters" />
-    <meta property="og:url" content="http://artchallenge.ru/en/" />
-    <meta property="og:image" content="http://artchallenge.ru/art-challenge-logo-facebook.png" />
+    <meta property="og:url" content="http://artchallenge.me/" />
+    <meta property="og:image" content="http://artchallenge.me/art-challenge-logo-facebook.png" />
     <meta property="og:site_name" content="Art Challenge"/>
     
     <!-- Bootstrap core CSS -->
@@ -517,21 +517,21 @@
           icon: "glyphicon glyphicon-thumbs-up",
           history: false          
       });
-      yaCounter24594722.reachGoal('WINNER');
+      yaCounter24934448.reachGoal('WINNER');
       document.getElementById("icon10").style.color = "rgb(53,115,45)";                
     }
 
     
     function ShareVK() {
-      yaCounter24594722.reachGoal('WINNER-SHARE-VK');
-      url = "http://vk.com/share.php?url=http://artchallenge.ru/en/?utm_source=vk-win-en" + "&title=Ladies and Gentlemen, I am really good at the knowledge of Art! %23ArtChallenge&description=Try to guess 10 painters in a row and defeat your friends!&image=http://artchallenge.ru/art-challenge-winner1.png";
+      yaCounter24934448.reachGoal('WINNER-SHARE-VK');
+      url = "http://vk.com/share.php?url=http://artchallenge.me/?utm_source=vk-win-en" + "&title=Ladies and Gentlemen, I am really good at the knowledge of Art! %23ArtChallenge&description=Try to guess 10 painters in a row and defeat your friends!&image=http://artchallenge.me/art-challenge-winner1.png";
       window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
     }        
     
     function ShareFB() {
-      yaCounter24594722.reachGoal('WINNER-SHARE-FB');
+      yaCounter24934448.reachGoal('WINNER-SHARE-FB');
       
-      url = "https://www.facebook.com/dialog/feed?app_id=478531102278887&display=popup&link=http://artchallenge.ru/en/?utm_source=fb-win-en&redirect_uri=http://artchallenge.ru/1.html&picture=http://artchallenge.ru/en/winner-badge460.png&source=http://artchallenge.ru/en/winner-badge460.png&name=Ladies and Gentlemen, I am really good at the knowledge of Art!&caption=Art Challenge - Game on Knowledge of Popular Painters"
+      url = "https://www.facebook.com/dialog/feed?app_id=478531102278887&display=popup&link=http://artchallenge.me/?utm_source=fb-win-en&redirect_uri=http://artchallenge.me/1.html&picture=http://artchallenge.me/winner-badge460.png&source=http://artchallenge.me/winner-badge460.png&name=Ladies and Gentlemen, I am really good at the knowledge of Art!&caption=Art Challenge - Game on Knowledge of Popular Painters"
       
       window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
     }        
@@ -769,7 +769,7 @@
     }
     
     function retry(){
-      yaCounter24594722.reachGoal('AGAIN-CLICK');
+      yaCounter24934448.reachGoal('AGAIN-CLICK');
       location.reload(false);
     }
     
@@ -777,7 +777,7 @@
     function checkAnswer(btn) { 
     var answer = document.getElementById(btn).innerHTML;
 
-    yaCounter24594722.reachGoal('ANSWER-CLICK');
+    yaCounter24934448.reachGoal('ANSWER-CLICK');
     
     if (answer == window.truePainterName) {
  
@@ -809,7 +809,7 @@
           sticker: false,
           history: false          
       });
-      yaCounter24594722.reachGoal('WIN');
+      yaCounter24934448.reachGoal('WIN');
       }
       
     }
@@ -831,7 +831,7 @@
       });
       
       
-      yaCounter24594722.reachGoal('FAIL');
+      yaCounter24934448.reachGoal('FAIL');
       
       document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
 
@@ -926,7 +926,7 @@
     }
     
     function report() {
-      yaCounter24594722.reachGoal('REPORT');
+      yaCounter24934448.reachGoal('REPORT');
     document.getElementById("report").innerHTML = "Спасибо, мы проверим!";
     document.getElementById("report").onclick = function() { void(0);};
     var link = "https://dl.dropboxusercontent.com/u/15486902/painters/" + window.truePainter + "/" + window.image + ".jpg"
@@ -966,7 +966,7 @@
            data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir" data-yashareTheme="counter"></div> 
         </ul>
 
-        <a href="http://www.artchallenge.ru/en/"><h3 class="text-muted"><span class="glyphicon glyphicon-pencil"></span> Art Challenge</h3></a>
+        <a href="http://www.artchallenge.me/"><h3 class="text-muted"><span class="glyphicon glyphicon-pencil"></span> Art Challenge</h3></a>
       </div>
       <br>
 
@@ -1016,7 +1016,7 @@
           If you liked the site, be so kind and tell your friends about it:<br>
 
           <div style="margin-left: -5px;" class="yashare-auto-init" data-yashareL10n="ru"
-           data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir" data-yashareTheme="counter" data-yashareImage="http://artchallenge.ru/art-challenge-logo.png"></div> 
+           data-yashareQuickServices="facebook,twitter" data-yashareTheme="counter" data-yashareImage="http://artchallenge.me/art-challenge-logo.png"></div> 
            
            <h3>No Ads on the site?</h3>
            <p>Yes, totally, and never in the future!<br>
@@ -1033,7 +1033,7 @@
              
 
           <h3>Other languages?</h3>
-          <p>Yes, we also have the <a href='http://artchallenge.ru'>Russian version.</a></p>
+          <p>Yes, we also have the <a href='http://artchallenge.ru' onclick="yaCounter24934448.reachGoal('RUSSIAN'); return true;">Russian version.</a></p>
 
           <h3>Follow us on Facebook:</h3>
 
@@ -1044,7 +1044,7 @@
 
       <br><br>
       <div class="footer">
-        <p>&copy; Site created by <a href="http://facebook.com/just14zy" onclick="yaCounter24594722.reachGoal('RUBEN-CLICK'); return true;"><img style="margin-bottom: 7px;" height="20px;" width="20px;" src="ruben.jpg">Ruben</a> and <a href="https://www.facebook.com/plotkina.anna" onclick="yaCounter24594722.reachGoal('ANNA-CLICK'); return true;"><img style="margin: 0 3px 4px 0;" height="18px;" width="18px;" src="anna.jpg">Anna</a> in 2014. Feel free to write us, if you have any questions.<br>
+        <p>&copy; Site created by <a href="http://facebook.com/just14zy" onclick="yaCounter24934448.reachGoal('RUBEN-CLICK'); return true;"><img style="margin-bottom: 7px;" height="20px;" width="20px;" src="ruben.jpg">Ruben</a> and <a href="https://www.facebook.com/plotkina.anna" onclick="yaCounter24934448.reachGoal('ANNA-CLICK'); return true;"><img style="margin: 0 3px 4px 0;" height="18px;" width="18px;" src="anna.jpg">Anna</a> in 2014. Feel free to write us, if you have any questions.<br>
         Our other projects: <a target="_blank" href="http://social-coins.com/?utm_source=artchallenge-en">Social Coins</a> | <a target="_blank" href="http://forgiveme.today/?utm_source=artchallenge-en">Forgiveme.today</p>
       </div>
     </div> <!-- /container -->
@@ -1062,7 +1062,7 @@
     (function (d, w, c) {
         (w[c] = w[c] || []).push(function() {
             try {
-                w.yaCounter24594722 = new Ya.Metrika({id:24594722,
+                w.yaCounter24934448 = new Ya.Metrika({id:24934448,
                         webvisor:true,
                         clickmap:true,
                         trackLinks:true,
@@ -1082,7 +1082,7 @@
         } else { f(); }
     })(document, window, "yandex_metrika_callbacks");
     </script>
-    <noscript><div><img src="//mc.yandex.ru/watch/24594722" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <noscript><div><img src="//mc.yandex.ru/watch/24934448" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
   </body>
 </html>
