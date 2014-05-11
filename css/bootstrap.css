@@ -518,11 +518,7 @@ p {
 @media (max-width: 470px) {
   
   #art {
-   width: 289px;
-  }
-  
-  #vk_groups {
-    display: none;
+   width: 288px;
   }
   
   #fb_page {
