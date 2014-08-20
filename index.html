@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:type"   content="website" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Try to guess 10 painters in a row and defeat your friends!">
+    <meta property="og:description" content="Try to guess 10 painters in a row and defeat your friends!" />
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="image_src" href="http://artchallenge.me/art-challenge-logo.png">
+    <title>Art Challenge - Game on Knowledge of Popular Painters</title>
+    <meta property="og:title" content="Art Challenge - Game on Knowledge of Popular Painters" />
+    <meta property="og:url" content="http://artchallenge.me/" />
+    <meta property="og:image" content="http://artchallenge.me/art-challenge-logo-facebook.png" />
+    <meta property="og:site_name" content="Art Challenge"/>    
+
+    <meta name="twitter:card" content="photo">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:creator" content="@14zy">
+    <meta name="twitter:title" content="Art Challenge - Game on Knowledge of Popular Painters">
+    <meta name="twitter:image:src" content="http://artchallenge.me/art-challenge-logo-facebook.png">
+    <meta name="twitter:domain" content="ArtChallenge.me">
+    <meta name="twitter:app:name:iphone" content="">
+    <meta name="twitter:app:name:ipad" content="">
+    <meta name="twitter:app:name:googleplay" content="">
+    <meta name="twitter:app:url:iphone" content="">
+    <meta name="twitter:app:url:ipad" content="">
+    <meta name="twitter:app:url:googleplay" content="">
+    <meta name="twitter:app:id:iphone" content="">
+    <meta name="twitter:app:id:ipad" content="">
+    <meta name="twitter:app:id:googleplay" content="">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+  </head>
+  <body onload="load()">
+    <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <div id="top-share" style="margin-top: 4px;" class="yashare-auto-init" data-yashareL10n="en"
+           data-yashareQuickServices="facebook,twitter,gplus,vkontakte" data-yashareTheme="counter" data-yashareLink="http://artchallenge.me/"></div>
+        </ul>
+
+        <a href="http://www.artchallenge.me" title="ArtChallenge"><h3 class="text-muted"><span class="glyphicon glyphicon-pencil"></span> Art Challenge</h3></a>
+      </div>
+      <br>
+
+      <div style="text-align: center">
+        <div id="corner" class="panel panel-default">
+          <br>
+          <span style="visibility: hidden" id="counter">1</span>
+          <span id="icon1" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
+          <span id="icon2" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
+          <span id="icon3" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
+          <span id="icon4" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
+          <span id="icon5" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
+          <span id="icon6" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
+          <span id="icon7" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
+          <span id="icon8" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
+          <span id="icon9" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
+          <span id="icon10" style="color: lightgray; font-size: 24px;" class="glyphicon glyphicon-gift"></span>
+          <br><br>
+          <img id="art" src="loading1.gif" style="max-height: 600px; max-width: 900px;" title="Guess the author of this painting" alt="Guess the author of this painting">
+
+          <br><br>
+          <a id ="btn1" onclick="checkAnswer('btn1');" class="btn btn-lg btn-success" role="button"></a>
+          <a id ="btn2" onclick="checkAnswer('btn2');" class="btn btn-lg btn-success" role="button"></a>
+          <a id ="btn3" onclick="checkAnswer('btn3');" class="btn btn-lg btn-success" role="button"></a>
+          <a id ="btn4" onclick="checkAnswer('btn4');" class="btn btn-lg btn-success" role="button"></a>        
+          <br><br>
+
+
+          <!-- ArtChallenge.me_responsive -->
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="ca-pub-2407992058828148"
+               data-ad-slot="9817347253"
+               data-ad-format="auto"></ins>
+               
+          <br>
+        </div>
+      </div>
+
+      <div class="row marketing">
+        <div class="col-lg-8">
+          <h3>What's going on here?</h3>
+          <p>You are proposed to entertain yourself by playing the game on knowledge of the history of art.</p>
+
+          <h3>How does it work?</h3>
+          <p>You need to guess the painters.<br>You will win if you can guess 10 pictures in a row.</p>
+          
+          <h3>What good can it do?</h3>
+          <p>Play in your free time, and very soon you'll easily differentiate Claude Monet from Edouard Manet at a glance, and certainly from Alfred Sisley :)</p>
+
+          <h3>How can I help?</h3>
+          If you like the site, be so kind and tell your friends about it:<br>
+
+          <div style="margin-left: -5px;" class="yashare-auto-init" data-yashareL10n="en"
+           data-yashareQuickServices="facebook,twitter,gplus,vkontakte" data-yashareTheme="counter" data-yashareImage="http://artchallenge.me/art-challenge-logo.png" data-yashareLink="http://artchallenge.me/"></div> 
+        
+          <h3>Settings:</h3>
+          Language: <strong><img style="margin-top: -6px; padding-right: 2px;" width="24" src="pics/GB.png" alt="English">English</strong> / <a href="http://artchallenge.ru" title="Русская версия игры ArtChallenge"><img style="margin-top: -6px; padding-right: 2px;" width="24" src="pics/RU.png" alt="Russian flag">Russian</a> <!--<span style="color: gray">/ Deutsch / Italiana / Français / Español / 日本語 / 漢語 </span>--><br>
+          Profanity: <span id="btnOn" style="font-weight:bold;" onclick="begood(0);">On</span> / <span id="btnOff" style="cursor:pointer; color:#428BCA;" onclick="begood(1);">Off</span>
+           
+          <h3 id="vk_groups_title">Like us on Facebook:</h3>
+
+          <div id="fb_show">
+          <div id="fb_page" class="fb-like-box" style="margin-top: 10px; padding: 0 0 0 10px;" data-href="https://www.facebook.com/artchallenge.ru" data-width="300" data-height="250" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div></div>
+
+        </div>
+      </div>        
+
+      <br>
+      <div class="footer">
+        <p>&copy; Site created by <a href="http://facebook.com/just14zy" title="Ruben Babaev" onclick="yaCounter24934448.reachGoal('RUBEN-CLICK'); return true;"><img style="margin-bottom: 7px;" height="20" width="20" src="pics/ruben.jpg" alt="Ruben Babaev">Ruben</a> and <a href="https://vk.com/id9755975" title="Anna Plotkina" onclick="yaCounter24934448.reachGoal('ANNA-CLICK'); return true;"><img style="margin: 0 3px 4px 0;" height="18" width="18" src="pics/anna.jpg" alt="Anna Plotkina">Anna</a> in 2014. Feel free to write us, if you have any questions.<br>
+        Our other projects: <a target="_blank" href="http://gamechallenge.ru/?utm_source=artchallenge.me" title="Guess games by screenshots">Game Challenge</a> | <a target="_blank" href="http://forgiveme.today/?utm_source=artchallenge.me" title="Ask for for forgiveness anonymously">Forgiveme.today</a> | <a target="_blank" href="http://rostov-english.ru/?utm_source=artchallenge.me" title="Learn English in Rostov-on-Don">Rostov English</a>
+      </div>
+    </div> <!-- /container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+  	<script type="text/javascript" language="javascript">
+    function getCookie(cname) {
+      var name = cname + "=";
+      var ca = document.cookie.split(';');
+      for(var i=0; i<ca.length; i++) 
+        {
+        var c = ca[i].trim();
+        if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+        }
+      return "";
+    };
+
+    function load() {
+      removeUTMs();
+      document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+      begood(getCookie("begood"));
+      window.errorDelay = 8000;
+      if (document.getElementById("art").width <= 400) {
+        window.errorDelay = 4000;        
+      };
+      getart();
+    }
+
+    function getart() { 
+      currentWins();
+      var art = document.getElementById("art");
+      window.truePainter = Math.floor((Math.random()*56)+1);
+      
+      $.getJSON("painters/" + window.truePainter + "/data.json", function(json) {
+          window.image = Math.floor((Math.random()*json.paintings.length)+1);
+          art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+          window.truePainterName = json.name.en;
+          window.link = json.link.wikipedia.en;
+          window.years = json.years;
+          window.nation = json.nationality.en;
+          window.genre = json.genre.en;
+          putButtons(json.name.en);
+      });
+
+      puticons();
+    };
+    
+    function removeUTMs() {
+      if (/utm_/.test(location.search) && window.history.replaceState){
+ 
+        // thx @cowboy for the revised hash param magic.
+        var oldUrl = location.href;
+        var newUrl = oldUrl.replace(/\?([^#]*)/, function(_, search) {
+          search = search.split('&').map(function(v) {
+            return !/^utm_/.test(v) && v;
+          }).filter(Boolean).join('&'); // omg filter(Boolean) so dope.
+          return search ? '?' + search : '';
+        });
+ 
+        if ( newUrl != oldUrl ) {
+          window.history.replaceState({},'', newUrl);
+        }
+ 
+      }
+    };
+    
+    function currentWins() {
+      if (getCookie('wins') > 1) {
+        window.counter = getCookie('wins');
+      }
+      else {window.counter = 1}
+    };
+    
+    function putButtons(painter) {
+      function randomPainter() {
+        switch (Math.floor((Math.random()*56)+1))
+        {
+         case 1:
+           painterName = "Amedeo Modigliani";
+           break;
+        
+         case 2:
+           painterName = "Henri Lebasque";
+           break;
+        
+         case 3:
+           painterName = "Arkhip Kuinji";
+           break;
+        
+         case 4:
+           painterName = "Vasiliy Kandinskiy";
+           break;
+        
+         case 5:
+           painterName = "Vasily Surikov";
+           break;
+        
+         case 6:
+           painterName = "Victor Borisov-Musatov";
+           break;
+        
+         case 7:
+           painterName = "Diego Rivera";
+           break;
+        
+         case 8:
+           painterName = "Ivan Shishkin";
+           break;
+        
+         case 9:
+           painterName = "Claude Monet";
+           break;
+        
+         case 10:
+           painterName = "Konstantin Yuon";
+           break;
+
+         case 11:
+           painterName = "Nicholas Roerich"
+           break;
+
+         case 12:
+           painterName = "Orest Kiprensky";
+           break;
+        
+         case 13:
+           painterName = "Kuzma Petrov-Vodkin";
+           break;
+
+         case 14:
+           painterName = "Rene Magritte";
+           break;
+
+         case 15:
+           painterName = "Salvador Dali";
+           break;
+
+         case 16:
+           painterName = "Sergei Vinogradov";
+           break;
+
+         case 17:
+           painterName = "Edouard Manet";
+           break;
+
+         case 18:
+           painterName = "Andrew Wyeth";
+           break;
+
+         case 19:
+           painterName = "Andrei Rublev";
+           break;
+
+         case 20:
+           painterName = "Viktor Vasnetsov";
+           break;
+        
+         case 21:
+           painterName = "Vincent van Gogh";
+           break;
+        
+         case 22:
+           painterName = "Gustav Klimt";
+           break;
+        
+         case 23:
+           painterName = "Ivan Aivazovsky";
+           break;
+        
+         case 24:
+           painterName = "Hieronymus Bosch";
+           break;
+        
+         case 25:        
+           painterName = "Ilya Repin";
+           break;
+
+         case 26:        
+           painterName = "Kazimir Malevich";
+           break;
+
+         case 27:        
+           painterName = "Mikhail Vrubel";
+           break;
+
+         case 28:        
+           painterName = "Pablo Picasso";
+           break;
+
+         case 29:        
+           painterName = "Peter Paul Rubens";
+           break;
+
+         case 30:        
+           painterName = "Pierre-Auguste Renoir";
+           break;
+
+         case 31:        
+           painterName = "Theophanes the Greek";
+           break;
+
+         case 32:        
+           painterName = "Francisco Goya";
+           break;
+
+         case 33:        
+           painterName = "Frida Kahlo";
+           break;
+
+         case 34:        
+           painterName = "El Greco";
+           break;
+        
+         case 35:        
+           painterName = "Albrecht Dürer";
+           break;
+        
+         case 36:        
+           painterName = "Alfred Sisley";
+           break;
+
+         case 37:        
+           painterName = "Boris Kustodiev";
+           break;
+
+         case 38:        
+           painterName = "Karl Bryullov";
+           break;
+
+         case 39:        
+           painterName = "Pieter Bruegel";
+           break;
+
+         case 40:        
+           painterName = "Marc Chagall";
+           break;
+        
+         case 41:        
+           painterName = "Giotto di Bondone";
+           break;
+
+         case 42:        
+           painterName = "Sandro Botticelli";
+           break;
+
+         case 43:        
+           painterName = "Caravaggio";
+           break;
+
+         case 44:        
+           painterName = "Zinaida Serebriakova";
+           break;
+
+         case 45:        
+           painterName = "Leonardo da Vinci";
+           break;
+
+         case 46:        
+           painterName = "Diego Velazquez";
+           break;
+         
+         case 47:        
+           painterName = "Vasily Vereshchagin";
+           break;
+
+         case 48:        
+           painterName = "Isaac Levitan";
+           break;
+
+         case 49:        
+           painterName = "Henri Matisse";
+           break;
+
+         case 50:        
+           painterName = "Jan van Eyck";
+           break;
+         
+         case 51:        
+           painterName = "John Waterhouse";
+           break;
+         
+         case 52:        
+           painterName = "Egon Schiele";
+           break;
+         
+         case 53:        
+           painterName = "Edgar Degas";
+           break;
+         
+         case 54:        
+           painterName = "Rembrandt";
+           break;
+         
+         case 55:        
+           painterName = "Titian";
+           break;
+         
+         case 56:        
+           painterName = "Alphonse Mucha";
+           break;
+        };
+        return painterName;
+      };
+      
+      var painters = [painter];
+      for (var i=0;i<10;i++) {
+        painters.push(randomPainter());
+      }
+       
+      //unique
+      painters = painters.reverse().filter(function (e, i, painters) {
+         return painters.indexOf(e, i+1) === -1;
+      }).reverse(); 
+
+      var buttons = [];
+      buttons.push(painters[0]);      
+      buttons.push(painters[1]);
+      buttons.push(painters[2]);
+      buttons.push(painters[3]);     
+      
+      function shuffle(o){ //v1.0
+        for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+        return o;
+      };
+
+      shuffle(buttons);
+
+      document.getElementById("btn1").innerHTML = buttons[0];
+      document.getElementById("btn2").innerHTML = buttons[1];
+      document.getElementById("btn3").innerHTML = buttons[2];
+      document.getElementById("btn4").innerHTML = buttons[3];
+    };
+    
+    function puticons() {
+      for (var i=1; i < window.counter; i++ ) {
+        document.getElementById("icon"+i).style.color = "rgb(53,115,45)";                
+      } 
+    };
+        
+    </script>
+    
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+    <script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+    <script src="js/pnotify.custom.min.js" type="text/javascript"></script>
+    <link href="js/pnotify.custom.min.css" media="all" rel="stylesheet" type="text/css" />
+        
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "http://connect.facebook.net/en_GB/all.js#xfbml=1&appId=478531102278887";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    
+  	<script>
+    function checkAnswer(btn) { 
+    var answer = document.getElementById(btn).innerHTML;
+    
+    if (answer == window.truePainterName) {
+ 
+      document.getElementById("btn1").onclick = function() { void(0);};
+      document.getElementById("btn2").onclick = function() { void(0);};
+      document.getElementById("btn3").onclick = function() { void(0);};
+      document.getElementById("btn4").onclick = function() { void(0);};
+      document.getElementById(btn).style.background = "blue";
+      document.getElementById(btn).style.borderColor = "blue";      
+
+      var wins = parseInt(window.counter);
+            
+      if (wins == 10) {
+        winner();
+      }
+      
+      else {
+      wins = 1 + wins;
+      setCookie('wins',wins,"session");
+      setTimeout(function() {refresh("good");}, 1000)
+      
+      new PNotify({
+          title: 'Right!',
+          text: 'You guessed picture ' + parseInt(window.counter),
+          type: 'success',
+          hide: true,
+          animate_speed: "normal",
+          delay: 2000,
+          remove: true,
+          buttons: {
+            closer: false,
+            sticker: false
+          },
+          history: {
+            history: true,
+            menu: false
+          }
+
+      });
+      yaCounter24934448.reachGoal('WIN');
+      };
+      
+    }
+
+    else {
+
+      setTimeout(function() {refresh("bad");}, 4000)
+      new PNotify({
+          title: badPhrase(),
+          text:  "It's " + window.truePainterName + ".<br><br><img src='" + "painters/" + window.truePainter + "/photo.jpg' style='width: 100px;'><br><br><div style='padding: 2px;'>Years: " + window.years + "<br>Nationality: " + window.nation + "<br>Genre: " + window.genre + "</div><br><a href='" + window.link + "' target='_blank' class='btn btn-primary'>Learn more</a>",
+          type: 'error',
+          icon: 'glyphicon glyphicon-remove',
+          hide: true,
+          animate_speed: "normal",
+          delay: window.errorDelay,
+          remove: true,
+          buttons: {
+            closer: true,
+            sticker: false
+          },
+          history: {
+            history: true,
+            menu: false
+          }
+      });
+
+      document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+            
+      document.getElementById("btn1").onclick = function() { void(0);};
+      document.getElementById("btn2").onclick = function() { void(0);};
+      document.getElementById("btn3").onclick = function() { void(0);};
+      document.getElementById("btn4").onclick = function() { void(0);};
+      document.getElementById(btn).style.background = "red";
+      document.getElementById(btn).style.borderColor = "red";
+
+      yaCounter24934448.reachGoal('FAIL');      
+    };
+      
+    yaCounter24934448.reachGoal('ANSWER-CLICK');
+    };
+        
+    function setCookie(cname,cvalue,exdays) {
+      var d = new Date();
+      d.setTime(d.getTime()+(exdays*24*60*60*1000));
+      var expires = "expires="+d.toGMTString();
+      document.cookie = cname + "=" + cvalue + "; " + expires;
+    };
+    
+    function badPhrase() {
+      if (window.goodboy == 1) {
+        phrase = "Wrong!"
+      }
+      else {
+        switch (Math.floor((Math.random()*12)+1))
+        {
+        case 1:
+          phrase = "You are mad!";
+          break;
+        
+        case 2:
+          phrase = "Hell of a day, huh?";
+          break;
+
+        case 3:
+          phrase = "You should be ashamed of yourself.";
+          break;
+        
+        case 4:
+          phrase = "Are you ill?!";
+          break;
+        
+        case 5:
+          phrase = "This is ridiculous!";
+          break;
+
+        case 6:
+          phrase = "What`s the nonsense?!";
+          break;
+
+        case 7:
+          phrase = "Engage yourself!";
+          break;
+
+        case 8:
+          phrase = "No, no and no!";
+          break;
+
+        case 9:
+          phrase = "Think better!";
+          break;
+
+        case 10:
+          phrase = "Sorry, it`s wrong.";
+          break;
+
+        case 11:
+          phrase = "What`s the hell?";
+          break;
+
+        case 12:
+          phrase = "God blind me!..";
+          break;
+        };
+      };
+      return phrase;      
+    };
+    
+    function winner() {
+      new PNotify({
+          title: 'Congratulations!',
+          text: 'You are really good at knowledge of the Art!<br>10/10 – it is better than 82% of people who plays this game!' + "<br><br><a onclick='ShareFB();' href='#'><img style='margin-left: 25px;' width='230px'  src='winner-badge.png'></a><br><br><text style='font-size: 16px;'>You can share your win with friends:<br><a onclick='ShareFB();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Facebook </a><br><a onclick='ShareTW();' href='#'> <span class='glyphicon glyphicon-share-alt'></span> Twitter </a><br><a onclick='ShareVK();' href='#'> <span class='glyphicon glyphicon-share-alt'></span> VKontakte </a></text>",
+          type: 'note',
+          hide: false,
+          animate_speed: "normal",
+          icon: "glyphicon glyphicon-thumbs-up",
+          buttons: {
+            closer: false,
+            sticker: false
+          },
+          history: {
+            history: true,
+            menu: false
+          }
+          
+      });
+      document.getElementById("icon10").style.color = "rgb(53,115,45)";
+      yaCounter24934448.reachGoal('WINNER');
+    };
+
+    
+    function ShareVK() {
+      url = "http://vk.com/share.php?url=http://artchallenge.me/?utm_source=vk-win" + "&title=Ladies and Gentlemen, I am really good at the knowledge of Art! %23ArtChallenge&description=Try to guess 10 painters in a row and defeat your friends!&image=http://artchallenge.me/art-challenge-winner1.png";
+      window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
+      yaCounter24934448.reachGoal('WINNER-SHARE-VK');
+    };  
+    
+    function ShareFB() {      
+      url = "https://www.facebook.com/dialog/feed?app_id=263690153811188&display=popup&link=http://artchallenge.me/?utm_source=fb-win&redirect_uri=http://artchallenge.me/1.html&picture=http://artchallenge.me/winner-badge460.png&source=http://artchallenge.me/winner-badge460.png&name=Ladies and Gentlemen, I am really good at the knowledge of Art!&caption=Art Challenge - Game on Knowledge of Popular Painters";
+      window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
+      yaCounter24934448.reachGoal('WINNER-SHARE-FB');
+    };
+
+    function ShareTW() {
+      yaCounter24934448.reachGoal('WINNER-SHARE-TW');
+      url= "http://twitter.com/share?text=Ladies and Gentlemen, I am really good at the knowledge of Art! &url=http://ArtChallenge.me/&hashtags=ArtChallenge";
+      window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
+    };
+        
+    function refresh(sign){
+      if (sign == "bad") {
+        for (var i=1; i < 10; i++ ) {
+            document.getElementById("icon"+i).style.color = "lightgray";                
+        }; 
+      };
+
+      document.getElementById("btn1").onclick = function() { checkAnswer('btn1'); };
+      document.getElementById("btn1").style.background = "";
+      document.getElementById("btn1").style.borderColor = "";
+      document.getElementById("btn2").onclick = function() { checkAnswer('btn2'); };
+      document.getElementById("btn2").style.background = "";
+      document.getElementById("btn2").style.borderColor = "";
+      document.getElementById("btn3").onclick = function() { checkAnswer('btn3'); };
+      document.getElementById("btn3").style.background = "";
+      document.getElementById("btn3").style.borderColor = "";
+      document.getElementById("btn4").onclick = function() { checkAnswer('btn4'); };
+      document.getElementById("btn4").style.background = "";
+      document.getElementById("btn4").style.borderColor = "";
+
+      document.getElementById("art").src = "loading1.gif"
+      getart();
+    }
+    
+    function begood(value){
+      if (value == 1) {
+        setCookie('begood',1,360);
+        window.goodboy = 1;
+        document.getElementById("btnOff").style.color="black";
+        document.getElementById("btnOff").style.fontWeight="bold";
+        document.getElementById("btnOff").style.cursor="default";
+        document.getElementById("btnOn").style.color="#428BCA";
+        document.getElementById("btnOn").style.fontWeight="normal";
+        document.getElementById("btnOn").style.cursor="pointer";
+
+      };
+      
+      if (value == 0) {
+        setCookie('begood',0,360);
+        window.goodboy = 0;
+        document.getElementById("btnOff").style.color="#428BCA";
+        document.getElementById("btnOff").style.fontWeight="normal";
+        document.getElementById("btnOff").style.cursor="pointer";
+        document.getElementById("btnOn").style.color="black";
+        document.getElementById("btnOn").style.fontWeight="bold";
+        document.getElementById("btnOn").style.cursor="default";
+      };
+    }
+        
+    </script>
+
+    <script type="text/javascript" src="http://yandex.st/share/share.js"
+    charset="utf-8"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-50857312-1', 'artchallenge.me');
+      ga('require', 'displayfeatures');
+      ga('require', 'linkid', 'linkid.js');
+      ga('send', 'pageview');
+    </script>
+    
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter24934448 = new Ya.Metrika({id:24934448,
+                        webvisor:true,
+                        clickmap:true,
+                        trackLinks:true,
+                        accurateTrackBounce:true});
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript><div><img src="//mc.yandex.ru/watch/24934448" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+  </body>
+</html>
