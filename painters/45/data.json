@@ -1,18 +1,16 @@
 {
   "id": 45,
-  "name": {
-    "ru": "Леонардо да Винчи",
-    "en": "Leonardo da Vinci" },
+  "name": "Leonardo da Vinci",
   "years": "1452 - 1519",
-  "genre": {
-    "ru": "Высокое Возрождение",
-    "en": "High Renaissance" },
-  "nationality": {
-    "ru": "Итальянец",
-    "en": "Italian" },
+  "genre": ["High Renaissance"],
+  "nationality": ["Italian"],
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Leonardo_da_Vinci.html",
     "wikipedia": {

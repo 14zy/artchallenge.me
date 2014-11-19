@@ -1,18 +1,16 @@
 {
   "id": 39,
-  "name": {
-    "ru": "Питер Брейгель",
-    "en": "Pieter Bruegel" },
+  "name": "Pieter Bruegel",
   "years": "1525 - 1569",
-  "genre": {
-    "ru": "Северное Возрождение",
-    "en": "Northern Renaissance" },
-  "nationality": {
-    "ru": "Фламандец",
-    "en": "Flemish" },
+  "genre": ["Northern Renaissance"],
+  "nationality": ["Flemish"],
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Pieter_Bruegel_the_Elder.html",
     "wikipedia": {

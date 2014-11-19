@@ -1,18 +1,16 @@
 {
   "id": 20,
-  "name": {
-    "ru": "Виктор Васнецов",
-    "en": "Viktor Vasnetsov" },
+  "name": "Viktor Vasnetsov",
   "years": "1848 - 1926",
-  "genre": {
-    "ru": "Романтизм, Символизм",
-    "en": "Romanticism, Symbolism" },
-  "nationality": {
-    "ru": "Русский",
-    "en": "Russian" },
+  "genre": ["Romanticism", "Symbolism"],
+  "nationality": ["Russian"],
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Viktor_Vasnetsov.html",
     "wikipedia": {

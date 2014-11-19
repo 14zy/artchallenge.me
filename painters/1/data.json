@@ -1,18 +1,16 @@
 {
   "id": 1,
-  "name": {
-    "ru": "Амедео Модильяни",
-    "en": "Amedeo Modigliani" },
+  "name": "Amedeo Modigliani",
   "years": "1884 - 1920",
-  "genre": {
-    "ru": "Экспрессионизм",
-    "en": "Expressionism" },
-  "nationality": {
-    "ru": "Итальянец",
-    "en": "Italian" },
+  "genre": ["Expressionism"],
+  "nationality": ["Italian"],
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Amedeo_Modigliani.html",
     "wikipedia": {

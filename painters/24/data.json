@@ -1,18 +1,16 @@
 {
   "id": 24,
-  "name": {
-    "ru": "Иероним Босх",
-    "en": "Hieronymus Bosch" },
+  "name": "Hieronymus Bosch",
   "years": "1450 - 1516",
-  "genre": {
-    "ru": "Северное Возрождение",
-    "en": "Northern Renaissance" },
-  "nationality": {
-    "ru": "Голландец",
-    "en": "Dutch" },
+  "genre": ["Northern Renaissance"],
+  "nationality": ["Dutch"],
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Hieronymus_Bosch.html",
     "wikipedia": {

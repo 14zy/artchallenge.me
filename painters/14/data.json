@@ -1,18 +1,16 @@
 {
   "id": 14,
-  "name": {
-    "ru": "Рене Магритт",
-    "en": "Rene Magritte" },
+  "name": "Rene Magritte",
   "years": "1898 - 1967",
-  "genre": {
-    "ru": "Сюрреализм",
-    "en": "Surrealism" },
-  "nationality": {
-    "ru": "Бельгиец",
-    "en": "Belgian" },
+  "genre": ["Surrealism"],
+  "nationality": ["Belgian"],
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Rene_Magritte.html",
     "wikipedia": {
@@ -2361,18 +2359,6 @@
           "en": "" }},
   
         {"id": 196,
-        "name": {
-          "ru": "",
-          "en": "" },
-        "year": "",
-        "genre": {
-          "ru": "",
-          "en": "" },
-        "description": {
-          "ru": "",
-          "en": "" }},
-  
-        {"id": 197,
         "name": {
           "ru": "",
           "en": "" },

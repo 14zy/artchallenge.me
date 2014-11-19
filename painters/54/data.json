@@ -1,18 +1,16 @@
 {
   "id": 54,
-  "name": {
-    "ru": "Рембрандт",
-    "en": "Rembrandt" },
+  "name": "Rembrandt",
   "years": "1606 - 1669",
-  "genre": {
-    "ru": "Барокко",
-    "en": "Baroque" },
-  "nationality": {
-    "ru": "Голландец",
-    "en": "Dutch" },
+  "genre": ["Baroque"],
+  "nationality": ["Dutch"],
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Rembrandt.html",
     "wikipedia": {

@@ -1,18 +1,16 @@
 {
   "id": 11,
-  "name": {
-    "ru": "Николай Рерих",
-    "en": "Nicholas Roerich" },
+  "name": "Nicholas Roerich",
   "years": "1874 - 1947",
-  "genre": {
-    "ru": "Символизм",
-    "en": "Symbolism" },
-  "nationality": {
-    "ru": "Русский",
-    "en": "Russian" },
+  "genre": ["Symbolism"],
+  "nationality": ["Russian"],
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Nicholas_Roerich.html",
     "wikipedia": {

@@ -1,18 +1,16 @@
 {
   "id": 12,
-  "name": {
-    "ru": "Орест Кипренский",
-    "en": "Orest Kiprensky" },
+  "name": "Orest Kiprensky",
   "years": "1782 - 1836",
-  "genre": {
-    "ru": "Романтизм",
-    "en": "Romanticism" },
-  "nationality": {
-    "ru": "Русский",
-    "en": "Russian" },
+  "genre": ["Romanticism"],
+  "nationality": ["Russian"],
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Orest_Kiprensky.html",
     "wikipedia": {

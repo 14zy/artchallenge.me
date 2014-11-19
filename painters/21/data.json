@@ -1,18 +1,16 @@
 {
   "id": 21,
-  "name": {
-    "ru": "Винсент Ван Гог",
-    "en": "Vincent van Gogh" },
-  "years": "1853-1890",
-  "genre": {
-    "ru": "Постимпрессионизм",
-    "en": "Post-Impressionism" },
-  "nationality": {
-    "ru": "Голландец",
-    "en": "Dutch" },
+  "name": "Vincent van Gogh",
+  "years": "1853 – 1890",
+  "genre": ["Post-Impressionism"],
+  "nationality": ["Dutch"],
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Vincent_van_Gogh.html",
     "wikipedia": {

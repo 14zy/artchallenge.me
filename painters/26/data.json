@@ -1,18 +1,16 @@
 {
   "id": 26,
-  "name": {
-    "ru": "Казимир Малевич",
-    "en": "Kazimir Malevich" },
+  "name": "Kazimir Malevich",
   "years": "1879 - 1935",
-  "genre": {
-    "ru": "Супрематизм",
-    "en": "Suprematism" },
-  "nationality": {
-    "ru": "Русский",
-    "en": "Russian" },
+  "genre": ["Suprematism"],
+  "nationality": ["Russian"],
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Kazimir_Malevich.html",
     "wikipedia": {

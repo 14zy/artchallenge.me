@@ -1,18 +1,16 @@
 {
   "id": 35,
-  "name": {
-    "ru": "Альбрехт Дюрер",
-    "en": "Albrecht Dürer" },
+  "name": "Albrecht Dürer",
   "years": "1471 - 1528",
-  "genre": {
-    "ru": "Северное Возрождение",
-    "en": "Northern Renaissance" },
-  "nationality": {
-    "ru": "Немец",
-    "en": "German" },
+  "genre": ["Northern Renaissance"],
+  "nationality": ["German"],
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Albrecht_Durer.html",
     "wikipedia": {

@@ -1,18 +1,16 @@
 {
   "id": 2,
-  "name": {
-    "ru": "Анри Лебаск",
-    "en": "Henri Lebasque" },
+  "name": "Henri Lebasque",
   "years": "1865 - 1937",
-  "genre": {
-    "ru": "Импрессионизм",
-    "en": "Impressionism" },
-  "nationality": {
-    "ru": "Француз",
-    "en": "French" },
+  "genre": ["Impressionism"],
+  "nationality": ["French"],
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Henri_Lebasque.html",
     "wikipedia": {

@@ -1,18 +1,16 @@
 {
   "id": 47,
-  "name": {
-    "ru": "Василий Верещагин",
-    "en": "Vasily Vereshchagin" },
+  "name": "Vasily Vereshchagin",
   "years": "1842 - 1904",
-  "genre": {
-    "ru": "Реализм",
-    "en": "Realism" },
-  "nationality": {
-    "ru": "Русский",
-    "en": "Russian" },
+  "genre": ["Realism"],
+  "nationality": ["Russian"],
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Vasily_Vereshchagin.html",
     "wikipedia": {

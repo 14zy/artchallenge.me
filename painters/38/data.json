@@ -1,18 +1,16 @@
 {
   "id": 38,
-  "name": {
-    "ru": "Карл Брюллов",
-    "en": "Karl Bryullov" },
+  "name": "Karl Bryullov",
   "years": "1799 - 1852",
-  "genre": {
-    "ru": "Неоклассицизм, Романтизм",
-    "en": "Neoclassicism, Romanticism" },
-  "nationality": {
-    "ru": "Русский",
-    "en": "Russian" },
+  "genre": ["Neoclassicism", "Romanticism"],
+  "nationality": ["Russian"],
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Karl_Bryullov.html",
     "wikipedia": {

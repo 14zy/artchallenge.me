@@ -1,18 +1,16 @@
 {
   "id": 36,
-  "name": {
-    "ru": "Альфред Сислей",
-    "en": "Alfred Sisley" },
+  "name": "Alfred Sisley",
   "years": "1839 - 1899",
-  "genre": {
-    "ru": "Импрессионизм",
-    "en": "Impressionism" },
-  "nationality": {
-    "ru": "Француз, Британец",
-    "en": "French, British" },
+  "genre": ["Impressionism"],
+  "nationality": ["French", "British"],
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Alfred_Sisley.html",
     "wikipedia": {

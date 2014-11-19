@@ -1,18 +1,16 @@
 {
   "id": 28,
-  "name": {
-    "ru": "Пабло Пикассо",
-    "en": "Pablo Picasso" },
+  "name": "Pablo Picasso",
   "years": "1881 - 1973",
-  "genre": {
-    "ru": "Кубизм",
-    "en": "Cubism" },
-  "nationality": {
-    "ru": "Испанец",
-    "en": "Spanish" },
+  "genre": ["Cubism"],
+  "nationality": ["Spanish"],
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Pablo_Picasso.html",
     "wikipedia": {

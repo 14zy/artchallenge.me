@@ -1,18 +1,16 @@
 {
   "id": 42,
-  "name": {
-    "ru": "Сандро Боттичелли",
-    "en": "Sandro Botticelli" },
+  "name": "Sandro Botticelli",
   "years": "1445 - 1510",
-  "genre": {
-    "ru": "Раннее Возрождение",
-    "en": "Early Renaissance" },
-  "nationality": {
-    "ru": "Итальянец",
-    "en": "Italian" },
+  "genre": ["Early Renaissance"],
+  "nationality": ["Italian"],
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Sandro_Botticelli.html",
     "wikipedia": {

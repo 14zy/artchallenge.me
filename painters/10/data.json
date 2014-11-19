@@ -1,18 +1,16 @@
 {
   "id": 10,
-  "name": {
-    "ru": "Константин Юон",
-    "en": "Konstantin Yuon" },
-  "years": "1875–1958",
-  "genre": {
-    "ru": "Импрессионизм",
-    "en": "Impressionism" },
-  "nationality": {
-    "ru": "Русский",
-    "en": "Russian" },
+  "name": "Konstantin Yuon",
+  "years": "1875 – 1958",
+  "genre": ["Impressionism"],
+  "nationality": ["Russian"],
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Konstantin_Yuon.html",
     "wikipedia": {

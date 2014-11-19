@@ -1,18 +1,16 @@
 {
   "id": 41,
-  "name": {
-    "ru": "Джотто ди Бондоне",
-    "en": "Giotto di Bondone" },
+  "name": "Giotto di Bondone",
   "years": "1266 - 1337",
-  "genre": {
-    "ru": "Проторенессанс",
-    "en": "Proto Renaissance" },
-  "nationality": {
-    "ru": "Итальянец",
-    "en": "Italian" },
+  "genre": ["Proto Renaissance"],
+  "nationality": ["Italian"],
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Giotto.html",
     "wikipedia": {

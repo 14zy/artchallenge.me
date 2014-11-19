@@ -1,18 +1,16 @@
 {
   "id": 50,
-  "name": {
-    "ru": "Ян ван Эйк",
-    "en": "Jan van Eyck" },
+  "name": "Jan van Eyck",
   "years": "1395 - 1441",
-  "genre": {
-    "ru": "Северное Возрождение",
-    "en": "Northern Renaissance" },
-  "nationality": {
-    "ru": "Фламандец",
-    "en": "Flemish" },
+  "genre": ["Northern Renaissance"],
+  "nationality": ["Flemish"],
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Jan_van_Eyck.html",
     "wikipedia": {

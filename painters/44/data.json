@@ -1,18 +1,16 @@
 {
   "id": 44,
-  "name": {
-    "ru": "Зинаида Серебрякова",
-    "en": "Zinaida Serebriakova" },
+  "name": "Zinaida Serebriakova",
   "years": "1884 - 1967",
-  "genre": {
-    "ru": "Символизм, Экспрессионизм, Ар-деко",
-    "en": "Symbolism, Expressionism, Art Deco" },
-  "nationality": {
-    "ru": "Русский",
-    "en": "Russian" },
+  "genre": ["Symbolism", "Expressionism", "Art Deco"],
+  "nationality": ["Russian"],
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Zinaida_Serebriakova.html",
     "wikipedia": {

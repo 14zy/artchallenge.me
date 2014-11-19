@@ -1,18 +1,16 @@
 {
   "id": 6,
-  "name": {
-    "ru": "Виктор Борисов-Мусатов",
-    "en": "Victor Borisov-Musatov" },
+  "name": "Victor Borisov-Musatov",
   "years": "1870 - 1905",
-  "genre": {
-    "ru": "Символизм",
-    "en": "Symbolism" },
-  "nationality": {
-    "ru": "Русский",
-    "en": "Russian" },
+  "genre": ["Symbolism"],
+  "nationality": ["Russian"],
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Victor_Borisov-Musatov.html",
     "wikipedia": {

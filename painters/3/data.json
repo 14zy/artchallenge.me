@@ -1,18 +1,16 @@
 {
   "id": 3,
-  "name": {
-    "ru": "Архип Куинджи",
-    "en": "Arkhip Kuinji" },
+  "name": "Arkhip Kuinji",
   "years": "1842 - 1910",
-  "genre": {
-    "ru": "Реализм, Импрессионизм",
-    "en": "Realism, Impressionism" },
-  "nationality": {
-    "ru": "Русский",
-    "en": "Russian" },
+  "genre": ["Realism", "Impressionism"],
+  "nationality": ["Russian"],
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Arkhip_Kuindzhi.html",
     "wikipedia": {

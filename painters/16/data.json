@@ -1,18 +1,16 @@
 {
   "id": 16,
-  "name": {
-    "ru": "Сергей Виноградов",
-    "en": "Sergei Vinogradov" },
-  "years": "1869-1963",
-  "genre": {
-    "ru": "Импрессионизм",
-    "en": "Impressionism" },
-  "nationality": {
-    "ru": "Русский",
-    "en": "Russian" },
+  "name": "Sergei Vinogradov",
+  "years": "1869 – 1963",
+  "genre": ["Impressionism"],
+  "nationality": ["Russian"],
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Sergei_Vinogradov.html",
     "wikipedia": {
