@@ -583,7 +583,7 @@ function getShares() {
 
 
 function ShareFB() {
-  url = "https://www.facebook.com/dialog/feed?app_id=478531102278887&display=popup&link=http://artchallenge.me/?utm_source=fb-win&redirect_uri=http://artchallenge.me/1.html&picture=http://artchallenge.me/pics/badges/winner-badge-"+window.lang+"-shareFB.png&source=http://artchallenge.me/pics/badges/winner-badge-"+window.lang+"-shareFB.png&name="+i18n.t("shares.title",{lng: window.lang})+"&caption="+i18n.t("shares.caption",{lng: window.lang})+"&description="+i18n.t("shares.description",{lng: window.lang});      
+  url = "https://www.facebook.com/dialog/feed?app_id=263690153811188&display=popup&link=http://artchallenge.me/?utm_source=fb-win&redirect_uri=http://artchallenge.me/1.html&picture=http://artchallenge.me/pics/badges/winner-badge-"+window.lang+"-shareFB.png&source=http://artchallenge.me/pics/badges/winner-badge-"+window.lang+"-shareFB.png&name="+i18n.t("shares.title",{lng: window.lang})+"&caption="+i18n.t("shares.caption",{lng: window.lang})+"&description="+i18n.t("shares.description",{lng: window.lang});      
   window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
   yaCounter24934448.reachGoal('WINNER-SHARE-FB');
 };
