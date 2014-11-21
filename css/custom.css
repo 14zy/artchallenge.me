@@ -2,8 +2,8 @@
 
 .ui-pnotify.stack-mobile{
   top:2%;
-  right: 50%;
-  margin-right: -150px;
+  left: 50%;
+  margin-left: -150px;
 }
 
 #langMainDiv {
