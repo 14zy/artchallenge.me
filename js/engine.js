@@ -50,7 +50,7 @@ function load() {
   window.pnotify = "";
   //js magic for mobiles
   if (window.innerWidth <= 550) {
-    window.errorDelay = 3000;
+    window.errorDelay = 3500;
     document.getElementById("langDropMenu").className += " pull-right";
     window.pnotify = "stack-mobile";
   };
