@@ -452,6 +452,7 @@ else {
       delay: window.errorDelay,
       remove: true,
       addclass: window.pnotify,
+      mouse_reset: false,
       buttons: {
         closer: true,
         sticker: false
@@ -516,7 +517,7 @@ function learnMore() {
       }
   });
   
-  yaCounter24934448.reachGoal('LEARN-MORE');
+  yaCounter24934448.reachGoal('LEARN-MORE'); return true;
   
 };
     
