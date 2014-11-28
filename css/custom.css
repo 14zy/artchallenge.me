@@ -6,6 +6,12 @@
   margin-left: -150px;
 }
 
+.ui-pnotify.stack-learnMore{
+  top:10%;
+  left: 15%; 
+  width: 70%!important;
+}
+
 #langMainDiv {
   margin: -39px 0 0 150px;
 }
@@ -70,6 +76,19 @@
    width: 400px;
   }
   
+  #learnMoreInfo {
+   float: left;
+   padding: 10px 20px 5px 5px;
+   max-width: 180px;'
+  }
+   
+  #learnMoreBio {  
+   height: 300px;
+   text-align: justify;
+   padding-right: 5px;
+   overflow: scroll;'
+ }
+  
 }
   
 @media (max-width: 600px) {
@@ -97,6 +116,17 @@
   
   #btn4 {
     margin-bottom: -30px;
+  }
+  
+  #learnMoreInfo {
+    float: center;
+  }
+  
+  #learnMoreBio {  
+    text-align: justify;
+    padding-right: 0px;
+    overflow: visible;
+    display:inline;
   }
   
 }
@@ -128,6 +158,5 @@
   #btn4 {
     margin-bottom: -30px;
   }
-    
 }
 /* /Ruben zone */
