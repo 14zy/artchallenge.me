@@ -59,6 +59,7 @@ function load() {
   window.currentSet = basicSet;
   getart();
   begood(getCookie("begood"));
+  $('#btnLearnMore').on('click touchstart', learnMore);
 };
 
 load();
@@ -444,7 +445,7 @@ else {
   setTimeout(function() {refresh("bad");}, 4000)
   new PNotify({
       title: badPhrase(),
-      text:  i18n.t("message.wrong-desc", { lng: window.lang }) + " " + window.truePainterName + "<br><br><img src='" + "painters/" + window.truePainter + "/photo.jpg' style='width: 100px;'><br><br><a onclick='learnMore()' class='btn btn-primary'>" + i18n.t("message.learn-more", { lng: window.lang }) + "</a>",
+      text:  i18n.t("message.wrong-desc", { lng: window.lang }) + " " + window.truePainterName + "<br><br><img src='" + "painters/" + window.truePainter + "/photo.jpg' style='width: 100px;'><br><br><a id='btnLearnMore' onclick='learnMore()' class='btn btn-primary'>" + i18n.t("message.learn-more", { lng: window.lang }) + "</a>",
       type: 'error',
       icon: 'glyphicon glyphicon-remove',
       hide: true,
