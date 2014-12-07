@@ -691,7 +691,7 @@ function refresh(sign){
 
   document.getElementById("art").src = "pics/loading.gif";
   //window.scrollTo(0, 0);
-  $("html, body").animate({ scrollTop: 115 }, "slow");
+  $("html, body").animate({ scrollTop: 75 }, "slow");
   getart();
 }
 
