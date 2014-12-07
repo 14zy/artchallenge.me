@@ -670,8 +670,6 @@ function ShareMM() {
 };
     
 function refresh(sign){
-  //window.scrollTo(0, 0);
-  $("html, body").animate({ scrollTop: 75 }, "slow");
   if (sign == "bad") {
     for (var i=1; i < 10; i++ ) {
         document.getElementById("icon"+i).style.color = "lightgray";                
@@ -692,6 +690,8 @@ function refresh(sign){
   document.getElementById("btn4").style.borderColor = "";
 
   document.getElementById("art").src = "pics/loading.gif";
+  //window.scrollTo(0, 0);
+  $("html, body").animate({ scrollTop: 115 }, "slow");
   getart();
 }
 
