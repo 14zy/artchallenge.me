@@ -491,7 +491,7 @@ yaCounter24934448.reachGoal('ANSWER-CLICK');
 function learnMore() {
   window.msgWrong.remove();
   var learnMoreText = "\
-    <div style='max-height: 570px; overflow: scroll;'>\
+    <div id='learnMoreDiv' style='max-height: 570px; overflow: scroll;'>\
       <div id='learnMoreInfo'><p><img style='height: 200px; max-width: 170px;' src='painters/" + window.truePainter + "/photo.jpg'></p>\
       <p>"+window.years+"<br>"+window.nation+"</p>\
       <p><strong>"+i18n.t("message.genre", { lng: window.lang })+":</strong><br>"+window.genre+"</p>\
