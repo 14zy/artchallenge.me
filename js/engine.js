@@ -689,7 +689,7 @@ function refresh(sign){
   document.getElementById("btn4").style.background = "";
   document.getElementById("btn4").style.borderColor = "";
 
-  document.getElementById("art").src = "loading1.gif";
+  document.getElementById("art").src = "pics/loading.gif";
   getart();
 }
 

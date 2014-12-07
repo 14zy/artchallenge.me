@@ -108,7 +108,8 @@
   }
   
   #art {
-   height: 500px;
+    width: 100%;
+    height: auto;
   }
   
   #corner {
@@ -172,8 +173,7 @@
   }
           
   #btn1,#btn2,#btn3,#btn4 {  
-    border-radius: 0;
-    margin: 5px 0 0 0;
+    margin: 5px 10px 0 10px;
   }
   
 }
