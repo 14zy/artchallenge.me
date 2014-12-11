@@ -50,7 +50,7 @@ function load() {
     setLang(lang);
   };
   //removeUTMs();
-  window.platform = "http://178.62.133.139/painters/" // https://dl.dropboxusercontent.com/u/15486902/painters/ || http://178.62.133.139/painters/ || file:///Users/14zy/Dropbox/Public/painters/
+  window.platform = "painters/" // https://dl.dropboxusercontent.com/u/15486902/painters/ || http://178.62.133.139/painters/ || file:///Users/14zy/Dropbox/Public/painters/ || painters/
   document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
   window.errorDelay = 3000;
   window.pnotify = "";
