@@ -85,7 +85,11 @@ function getart() {
         window.wiki = json.link.wikipedia.en;
       };
       window.years = json.years;
-      window.bio = json.bio.ru;
+      if (window.lang == "ru" || window.lang == "en") {
+        window.bio = json.bio[window.lang];
+      } else {
+        window.bio = json.bio.ru;
+      }
       window.nation = undefined;
       json.nationality.forEach(function(entry) {
         if (window.nation == undefined) {
