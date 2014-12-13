@@ -161,6 +161,10 @@
     left: 5%; 
     width: 90%!important;
   }
+  
+  #learnMoreDiv {
+   overflow: scroll!important;
+ }
    
 }
 
@@ -188,5 +192,6 @@
   #btn1,#btn2,#btn3,#btn4 {  
     margin: 5px 10px 0 10px;
   }
+    
   
 }
