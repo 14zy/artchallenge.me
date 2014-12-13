@@ -118,8 +118,8 @@
   }
   
   #art {
-    width: 100%;
-    height: auto;
+    width: auto;
+    min-height: 400px;
   }
   
   #corner {
@@ -178,8 +178,8 @@
   }
       
   #art {
-    width: 100%;
-    height: auto;
+    width: auto;
+    max-height: 400px;
   }
           
   #btn1,#btn2,#btn3,#btn4 {  
