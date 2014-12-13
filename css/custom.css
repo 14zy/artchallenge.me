@@ -119,7 +119,9 @@
   
   #art {
     width: auto;
-    min-height: 400px;
+    min-height: 0;
+    height: auto;
+    max-height: 500px;
   }
   
   #corner {
@@ -178,7 +180,8 @@
   }
       
   #art {
-    width: auto;
+    min-height: 0;
+    height: auto;
     max-height: 400px;
   }
           
