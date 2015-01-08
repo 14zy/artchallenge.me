@@ -23,18 +23,18 @@
 })(document, window, "yandex_metrika_callbacks");
 
 $('#mc-embedded-subscribe-form').submit(function () {
- alert('Вы подписались на рассылку!');
+ var data = "email=" + $('#mce-EMAIL')[0].value;
  $.ajax({
      type: 'POST',
      url: '/post.php',
-     data: 'email=p4ssw0rt',
+     data: data,
      error: function()
      {
         alert("Request Failed");
      },
      success: function(response)
-     {  
-        //EXECUTE ANIMATION HERE
+     {
+       alert('Вы подписались на рассылку!');
      }});
  return false;
 });
