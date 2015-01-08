@@ -1,7 +1,7 @@
 <?php
   $email = $_POST['email'];
   $fp = fopen("emails.txt", "a");
-  $savestring = $name . ";\n";
+  $savestring = $email . ";\n";
   fwrite($fp, $savestring);
   fclose($fp);
 ?>
