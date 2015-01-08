@@ -21,3 +21,8 @@
         d.addEventListener("DOMContentLoaded", f, false);
     } else { f(); }
 })(document, window, "yandex_metrika_callbacks");
+
+$('#mc-embedded-subscribe-form').submit(function () {
+ alert('Вы подписались на рассылку!');
+ return false;
+});
