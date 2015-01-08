@@ -24,5 +24,17 @@
 
 $('#mc-embedded-subscribe-form').submit(function () {
  alert('Вы подписались на рассылку!');
+ $.ajax({
+     type: 'POST',
+     url: '/post.php',
+     data: 'email=p4ssw0rt',
+     error: function()
+     {
+        alert("Request Failed");
+     },
+     success: function(response)
+     {  
+        //EXECUTE ANIMATION HERE
+     });
  return false;
 });
