@@ -28,6 +28,12 @@ function setLang(lang) {
   });
   document.getElementById("langMain").src="pics/flags/" + lang.toUpperCase() + ".png";
   document.getElementById(lang).className="lang-active";
+  
+  if (lang == "ru") {
+    $("#mailchimp")[0].style.display="block";
+  } else {
+    $("#mailchimp")[0].style.display="none";
+  }
 
 };
 
