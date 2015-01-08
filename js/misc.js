@@ -35,6 +35,6 @@ $('#mc-embedded-subscribe-form').submit(function () {
      success: function(response)
      {  
         //EXECUTE ANIMATION HERE
-     });
+     }});
  return false;
 });
