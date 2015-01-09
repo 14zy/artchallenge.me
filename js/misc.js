@@ -22,19 +22,45 @@
     } else { f(); }
 })(document, window, "yandex_metrika_callbacks");
 
+
+
 $('#mc-embedded-subscribe-form').submit(function () {
- var data = "email=" + $('#mce-EMAIL')[0].value;
- $.ajax({
-     type: 'POST',
-     url: '/post.php',
-     data: data,
-     error: function()
-     {
-        alert("Request Failed");
-     },
-     success: function(response)
-     {
-       alert('Вы подписались на рассылку!');
-     }});
+  
+  function IsEmail(email) {
+      var regex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+      return regex.test(email);
+  };
+
+  if (IsEmail($('#mce-EMAIL')[0].value)) {
+    var data = "email=" + $('#mce-EMAIL')[0].value;
+    $.ajax({
+        type: 'POST',
+        url: '/post.php',
+        data: data,
+        error: function()
+        {
+          swal({
+            title: "Ошибка!",
+            type: "error",
+            text: "Что-то пошло не так :("
+          });
+        },
+        success: function(response)
+        {
+          swal({
+            title: "Art Challenge",
+            type: "success",
+            text: "Вы успешно подписались на рассылку!"
+          });
+        }});
+  
+  } else {
+    swal({
+      title: "Ошибка!",
+      type: "warning",
+      text: "Проверьте правильность написания email"
+    });
+  };
+  
  return false;
 });

@@ -30,9 +30,9 @@ function setLang(lang) {
   document.getElementById(lang).className="lang-active";
   
   if (lang == "ru") {
-    $("#mailchimp")[0].style.display="block";
+    $("#subscribe")[0].style.display="block";
   } else {
-    $("#mailchimp")[0].style.display="none";
+    $("#subscribe")[0].style.display="none";
   }
 
 };
