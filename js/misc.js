@@ -35,7 +35,7 @@ $('#mc-embedded-subscribe-form').submit(function () {
     var data = "email=" + $('#mce-EMAIL')[0].value;
     $.ajax({
         type: 'POST',
-        url: '/post.php',
+        url: '//artchallenge.me/post.php',
         data: data,
         error: function()
         {
@@ -61,6 +61,6 @@ $('#mc-embedded-subscribe-form').submit(function () {
       text: "Проверьте правильность написания email"
     });
   };
-  
+ yaCounter24934448.reachGoal('SUBSCRIBE');
  return false;
 });
