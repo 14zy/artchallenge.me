@@ -1,6 +1,17 @@
 <?xml version="1.0"?>
-<!DOCTYPE cross-domain-policy 
-  SYSTEM "http://www.macromedia.com/xml/dtds/cross-domain-policy.dtd">
+
+<!DOCTYPE cross-domain-policy SYSTEM "http://www.macromedia.com/xml/dtds/crossdomain-
+policy.dtd">
 <cross-domain-policy>
-  <allow-access-from domain="googleads.g.doubleclick.net" />
+  <allow-access-from domain="*.doubleclick.net" secure="false"/>
+  <allow-access-from domain="*.2mdn.net" secure="false"/>
+  <allow-access-from domain="*.dartmotif.net" secure="false"/>
+
+  <allow-access-from domain="*.doubleclick.net" secure="true"/>
+
+  <allow-access-from domain="*.doubleclick.com" secure="true"/>
+  <allow-access-from domain="*.doubleclick.com" secure="false"/>
+  <allow-access-from domain="*.2mdn.net" secure="true"/>
+  <allow-access-from domain="*.dartmotif.net" secure="true"/>
+  <allow-access-from domain="*.gstatic.com" secure="false"/>
 </cross-domain-policy>
