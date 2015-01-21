@@ -15,13 +15,14 @@ function setLang(lang) {
     document.getElementById(window.lang).className="lang";
     setCookie('lang',lang,360);
     document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
-    refresh("bad");
+    refresh("bad",false);
   };
 
   window.lang = lang;
   i18n.init({ lng: lang });
   i18n.init(function(t) {
       $(".desc").i18n({lng: lang});
+      $(".sets").i18n({lng: lang});
       $(".head-lang").i18n({lng: lang});
       $(".yashare-auto-init").i18n({lng: lang});
       $(".footer").i18n({lng: lang});
@@ -49,26 +50,33 @@ function load() {
    lang = langCookie;
   };
   if (lang == "ru" || lang == "en" || lang == "de" || lang == "fr" || lang == "it" || lang == "es" ) {
-    //console.log(lang);
     setLang(lang);    
   } else {
     lang = "en";
     setLang(lang);
   };
-  //removeUTMs();
+
   window.platform = "painters/" // https://dl.dropboxusercontent.com/u/15486902/painters/ || http://178.62.133.139/painters/ || file:///Users/14zy/Dropbox/Public/painters/ || painters/
   document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
   window.errorDelay = 3000;
   window.pnotify = "";
+  
   //js magic for mobiles
   if (window.innerWidth <= 600) {
     window.errorDelay = 3000;
     document.getElementById("langDropMenu").className += " pull-right";
     window.pnotify = "stack-mobile";
   };
-  
-  window.basicSet = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56];
-  window.currentSet = basicSet;
+
+  window.currentSetName = getCookie("currentSet");
+  if (window.currentSetName == "") {
+    window.currentSetName="basicSet";
+    window.currentSet = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56];
+    document.getElementById("basicSet").className="lang-active";
+  } else {
+    changeSet(window.currentSetName);  
+  }
+
   getart();
   begood(getCookie("begood"));
 };
@@ -76,13 +84,20 @@ function load() {
 load();
 
 function getart() { 
+  //Почему то два раза вызывается при обычной закгрузке, проверить
   currentWins();
   var art = document.getElementById("art");
   window.truePainter = window.currentSet[Math.floor((Math.random()*window.currentSet.length))];
-  $.getJSON("painters/" + window.truePainter + "/data.json", function(json) {
+
+  $.getJSON("http://artchallenge.me/painters/" + window.truePainter + "/data.json", function(json) {
+      
+      $("#currentSetImg")[0].src="pics/sets/" + window.currentSetName + ".png";
+      $("#currentSetTitle")[0].innerHTML = i18n.t("sets." + window.currentSetName, { lng: window.lang }); // Этому тут совсем не место, но больше нигде не работает T_T
+
       window.paintings = json.paintings;
       window.image = Math.floor((Math.random()*window.paintings)+1);
       art.src = window.platform + truePainter + "/" + window.image + ".jpg";
+
       window.truePainterName = i18n.t("painters." + truePainter, { lng: window.lang });
       window.link = json.link.local;
       if (window.lang == "ru") { //Временно, пока в json не будут ссылки на википедию на всех языках
@@ -113,28 +128,15 @@ function getart() {
         }
       });
       putButtons(window.truePainterName);
+
+  }).fail(function() {
+    location.reload(); // bug fix на коленке, когда getJSON не срабатывает
   });
+
   puticons();
+
 };
 
-// function removeUTMs() {
-//   if (/utm_/.test(location.search) && window.history.replaceState){
-//
-//     // thx @cowboy for the revised hash param magic.
-//     var oldUrl = location.href;
-//     var newUrl = oldUrl.replace(/\?([^#]*)/, function(_, search) {
-//       search = search.split('&').map(function(v) {
-//         return !/^utm_/.test(v) && v;
-//       }).filter(Boolean).join('&'); // omg filter(Boolean) so dope.
-//       return search ? '?' + search : '';
-//     });
-//
-//     if ( newUrl != oldUrl ) {
-//       window.history.replaceState({},'', newUrl);
-//     }
-//
-//   }
-// };
 
 function currentWins() {
   if (getCookie('wins') > 1) {
@@ -146,7 +148,7 @@ function currentWins() {
 function putButtons(painter) {
   
   function randomPainter() {
-    var random = "painters." + Math.floor((Math.random()*56)+1)
+    var random = "painters." + window.currentSet[Math.floor((Math.random()*window.currentSet.length))];
     return i18n.t(random, { lng: window.lang });
   };
   
@@ -164,10 +166,10 @@ function putButtons(painter) {
   }).reverse(); 
 
   var buttons = [];
-  buttons.push(painters[0]);      
+  buttons.push(painters[0]);
   buttons.push(painters[1]);
   buttons.push(painters[2]);
-  buttons.push(painters[3]);     
+  buttons.push(painters[3]);
   
   function shuffle(o){ //v1.0
     for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
@@ -183,7 +185,7 @@ function putButtons(painter) {
 
 function puticons() {
   for (var i=1; i < window.counter; i++ ) {
-    document.getElementById("icon"+i).style.color = "rgb(53,115,45)";                
+    document.getElementById("icon"+i).style.color = "rgb(53,115,45)";
   } 
 };
 
@@ -407,7 +409,7 @@ function ShareMM() {
   yaCounter24934448.reachGoal('WINNER-SHARE-MM');
 };
     
-function refresh(sign){
+function refresh(sign,scroll){
   if (sign == "bad") {
     for (var i=1; i < 10; i++ ) {
         document.getElementById("icon"+i).style.color = "lightgray";                
@@ -428,8 +430,9 @@ function refresh(sign){
   document.getElementById("btn4").style.borderColor = "";
 
   document.getElementById("art").src = "pics/loading.svg";
-  //window.scrollTo(0, 0);
-  $("html, body").animate({ scrollTop: 120 }, "slow");
+  if (scroll != false) {
+    $("html, body").animate({ scrollTop: 120 }, "slow");
+  }
   getart();
 }
 
@@ -456,3 +459,30 @@ function begood(value){
     document.getElementById("btnOn").style.cursor="default";
   };
 }
+
+function changeSet(value) {
+    document.getElementById(window.currentSetName).className="lang";
+    window.currentSetName = value;
+
+    switch(value) {
+      case "newSet":
+        window.currentSet = [57,58,59,60,61,62,63];
+        setCookie('currentSet',value,360);
+        break;
+      case "russianSet":
+        window.currentSet = [48,23,3,4,5,6,8,10,11,12,13,16,19,20,25,26,27,31,37,38,44,47];
+        setCookie('currentSet',value,360);
+        break;
+      case "impressionismSet":
+        window.currentSet = [2,9,10,16,30,36,53,49,61,21,57,3,17,60];
+        setCookie('currentSet',value,360);
+        break;
+      default:
+        window.currentSet = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56];
+        document.cookie = "currentSet=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    };
+
+    document.getElementById(value).className="lang-active";
+
+    refresh("bad", false);
+  }

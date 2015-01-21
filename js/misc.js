@@ -3,7 +3,7 @@
     (w[c] = w[c] || []).push(function() {
         try {
             w.yaCounter24934448 = new Ya.Metrika({id:24934448,
-                    webvisor:true,
+                    webvisor:false,
                     clickmap:true,
                     trackLinks:true,
                     accurateTrackBounce:true});

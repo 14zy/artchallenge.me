@@ -29,22 +29,22 @@
   <body>
     <div class="container">
       <div class="header">                
-        
+
         <ul class="nav nav-pills pull-right">          
-          <!-- <div class="btn-group" style="margin-top: -5px;">
+
+          <div class="btn-group sets" style="margin-top: -10px;">
             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="border: none;">
-              <img id="langMain2" src="pics/packs/popular.png" alt="" width="32">
-              Популярные художники <span class="caret"></span>
+              <img id="currentSetImg" src="pics/sets/basicSet.png" alt="">
+              <span id="currentSetTitle"></span> <span class="caret"></span>
             </button>
-            <ul class="dropdown-menu" role="menu">
-              <li><a style="font-weight: bold; color: black;" class="lang" id="" onclick="" title=""><img src="pics/packs/popular.png" alt=""> Популярные художники</a></li>
-              <li><a style="#color:lightgray" class="lang" id="" onclick="" title=""><img src="pics/packs/Roundicons-09.png" alt=""> Художники Англии</a></li>
-              <li><a style="color: lightgray" class="lang" id="" onclick="" title=""><img src="pics/packs/Roundicons-45.png" alt=""> Импрессионисты 19 века</a></li>
-              <li><a style="color: lightgray" class="lang" id="" onclick="" title=""><img src="pics/packs/Roundicons-54.png" alt=""> Констрктивисты СССР</a></li>
-              <li><a style="color: lightgray" class="lang" id="" onclick="" title=""><img src="pics/packs/Roundicons-20.png" alt=""> Русская школа живописи</a></li>
-              <li><a style="color: lightgray" class="lang" id="" onclick="" title=""><img src="pics/packs/Roundicons-47.png" alt=""> Итальянское возрождение</a></li>
+            <ul class="dropdown-menu pull-right" role="menu">
+              <li><a class="lang" id="basicSet" onclick="changeSet('basicSet');" title=""><img src="pics/sets/basicSet.png" alt=""> <span data-i18n="sets.basicSet"></span></a></li>
+              <li><a class="lang" id="newSet" onclick="changeSet('newSet');" title=""><img src="pics/sets/newSet.png" alt=""> <span data-i18n="sets.newSet"></span></a></li>
+              <li><a class="lang" id="impressionismSet" onclick="changeSet('impressionismSet');" title=""><img src="pics/sets/impressionismSet.png" alt=""> <span data-i18n="sets.impressionismSet"></span></a></li>
+              <li><a class="lang" id="russianSet" onclick="changeSet('russianSet');" title=""><img src="pics/sets/russianSet.png" alt=""> <span data-i18n="sets.russianSet"></span></a></li>
+              <!-- <li><a style="color: lightgray" class="lang" id="" onclick="" title=""><img src="pics/sets/Roundicons-45.png" alt=""> Импрессионисты 19 века</a></li> -->
             </ul>
-          </div> -->
+          </div>
         </ul>
 
         <a class="logo" href="http://www.artchallenge.me" title="ArtChallenge"><h3 class="text-muted logo">Art Challenge</h3></a>
@@ -103,9 +103,10 @@
       </div>
 
       <div class="row marketing">
-
         <div class="col-lg-7 desc">
+
           <h3 data-i18n="desc.what">What's going on here?</h3>
+
           <p data-i18n="desc.what-desc">We offer you to have some fun by playing the art history game!</p>
 
           <h3 data-i18n="desc.how">How does it work?</h3>

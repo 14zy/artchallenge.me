@@ -174,5 +174,11 @@
     "Art Deco": "Ар-деко",
     "High Renaissance": "Высокое Возрождение",
     "Aestheticism": "Эстетизм"
+  },
+  "sets": {
+    "basicSet": "Популярные художники",
+    "newSet": "Коллекция Дмитрия",
+    "russianSet": "Русские художники",
+    "impressionismSet" : "Импрессионисты"
   }
 }

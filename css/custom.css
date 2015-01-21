@@ -54,7 +54,7 @@
 }
 
 .lang img, .lang-active img {
-  margin-top: -6px; 
+  margin-top: -3px; 
   padding-right: 2px;
   width: 24px; 
 }
@@ -85,6 +85,10 @@
 
 .press:hover {
   opacity: 0.4;
+}
+
+#currentSetImg {
+  width: 42px;
 }
 
 
@@ -168,7 +172,11 @@
   
   #learnMoreDiv {
    overflow: scroll!important;
- }
+  }
+  
+  #currentSetTitle {
+    display: none;
+  }
    
 }
 

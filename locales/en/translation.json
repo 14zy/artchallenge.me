@@ -174,5 +174,11 @@
     "Art Deco": "Art Deco",
     "High Renaissance": "High Renaissance",
     "Aestheticism": "Aestheticism"
+  },
+  "sets": {
+    "basicSet": "Popular painters",
+    "newSet": "Dmitry Collection",
+    "russianSet": "Russian painters",
+    "impressionismSet" : "Impressionists"
   }
 }
