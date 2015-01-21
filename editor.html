@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <style>
+      th {
+        padding-left: 10px;
+        padding-bottom: 10px;
+      }
+      
+      td {
+        padding-left: 10px;
+        padding-right: 10px;
+                  border-right: 1px solid #dad9c7; 
+      }
+      th.headerSortUp { 
+          background-image: url(../img/small_asc.gif); 
+          background-color: #3399FF; 
+      } 
+    
+      th.headerSortDown { 
+          background-image: url(../img/small_desc.gif); 
+          background-color: #3399FF; 
+      } 
+      
+      th.header { 
+          background-image: url(../img/small.gif); 
+          cursor: pointer; 
+          font-weight: bold; 
+          background-repeat: no-repeat; 
+          background-position: center left; 
+          padding-right: 50px; 
+          border-right: 1px solid #dad9c7; 
+          margin-left: -1px; 
+      } 
+    
+    </style>    
+  </head>
+  <body>
+    <div class="container"> 
+      <br><br>
+      <div class="col-md-offset-1 col-md-10"> 
+        <table id="myTable" class="tablesorter"> 
+          <thead> 
+            <tr> 
+              <th>ID</th> 
+              <th>Имя</th> 
+              <th>Картины</th> 
+              <th>Жанр</th> 
+              <th>Национальность</th> 
+              <th>Годы жизни</th> 
+            </tr> 
+          </thead> 
+          <tbody id="tbody">
+          </tbody> 
+        </table>
+      </div>
+
+    </div> <!-- /container -->
+    <br><br>
+    
+    <script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>    
+    <script defer src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/i18next-1.7.4.min.js" type="text/javascript"></script>    
+    <script defer src="js/pnotify.custom.min.js" type="text/javascript"></script>
+    <link href="js/pnotify.custom.min.css" media="all" rel="stylesheet" type="text/css" />
+    <script defer src="js/sweet-alert.min.js" type="text/javascript"></script>
+    <link href="js/sweet-alert.css" media="all" rel="stylesheet" type="text/css" />
+    <script src="js/editor/jquery.tablesorter.min.js" type="text/javascript"></script>
+    
+    
+    <script>
+      $(document).ready(function() { 
+        $("#myTable").tablesorter();   
+        
+        window.lang="en";
+        i18n.init({ lng: window.lang });
+
+        for (window.truePainter = 1; window.truePainter < 64; window.truePainter++) {
+          
+          $.getJSON("painters/"+ truePainter + "/data.json", function(json) {
+
+              window.paintings = json.paintings;
+              window.id = json.id;
+              window.truePainterName = json.name;
+              window.link = json.link.local;
+              window.wiki = json.link.wikipedia.ru;
+              window.years = json.years;
+              window.bio = json.bio[window.lang];
+              window.nation = undefined;
+              json.nationality.forEach(function(entry) {
+                if (window.nation == undefined) {
+                  window.nation = i18n.t("nation." + entry, { lng: window.lang });
+                } else {
+                  window.nation = window.nation + ", " + i18n.t("nation." + entry, { lng: window.lang });
+                }
+              });
+              window.genre = undefined;
+              json.genre.forEach(function(entry) {
+                if (window.genre == undefined) {
+                  window.genre = i18n.t("genre." + entry, { lng: window.lang });
+                } else {
+                  window.genre = window.genre + ", " + i18n.t("genre." + entry, { lng: window.lang });
+                }
+              });
+          
+
+              html = "<tr>\
+              <td>"+window.id +"</td>\
+              <td>"+window.truePainterName +"</td>\
+              <td>"+window.paintings+"</td>\
+              <td>"+window.genre+"</td>\
+              <td>"+window.nation+"</td>\
+              <td>"+window.years+"</td>\
+            </tr>";
+          
+            $("#tbody").append(html);
+            $("table").trigger("update"); 
+
+
+          }); //JSON
+      
+        } //for
+      });
+    </script>
+    
+  </body>
+</html>
