@@ -71,7 +71,7 @@ function load() {
   window.currentSetName = getCookie("currentSet");
   if (window.currentSetName == "") {
     window.currentSetName="basicSet";
-    window.currentSet = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56];
+    window.currentSet = [4,45,15,28,54,55,24,1,5,7,8,9,14,17,19,21,22,25,26,27,29,30,33,36,39,40,41,42,43,44,47,49,53,63,57];
     document.getElementById("basicSet").className="lang-active";
   } else {
     changeSet(window.currentSetName);  
@@ -89,7 +89,7 @@ function getart() {
   var art = document.getElementById("art");
   window.truePainter = window.currentSet[Math.floor((Math.random()*window.currentSet.length))];
 
-  $.getJSON("http://artchallenge.me/painters/" + window.truePainter + "/data.json", function(json) {
+  $.getJSON("painters/" + window.truePainter + "/data.json", function(json) {
       
       $("#currentSetImg")[0].src="pics/sets/" + window.currentSetName + ".png";
       $("#currentSetTitle")[0].innerHTML = i18n.t("sets." + window.currentSetName, { lng: window.lang }); // Этому тут совсем не место, но больше нигде не работает T_T
@@ -474,11 +474,11 @@ function changeSet(value) {
         setCookie('currentSet',value,360);
         break;
       case "impressionismSet":
-        window.currentSet = [2,9,10,16,30,36,53,49,61,21,57,3,17,60];
+        window.currentSet = [2,9,10,16,30,36,53,49,61,21,57,3,17,60,14];
         setCookie('currentSet',value,360);
         break;
       default:
-        window.currentSet = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56];
+        window.currentSet = [4,45,15,28,54,55,24,1,5,7,8,9,14,17,19,21,22,25,26,27,29,30,33,36,39,40,41,42,43,44,47,49,53,63,57];
         document.cookie = "currentSet=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
     };
 
