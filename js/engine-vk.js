@@ -130,7 +130,7 @@ function getart() {
       putButtons(window.truePainterName);
 
   }).fail(function() {
-    location.reload(); // bug fix на коленке, когда getJSON не срабатывает
+    // location.reload(); // bug fix на коленке, когда getJSON не срабатывает
   });
 
   puticons();
@@ -156,7 +156,7 @@ function putButtons(painter) {
   for (var i=0;i<10;i++) {
     painters.push(randomPainter());
     if (painters[1] == "") {
-      location.reload(); // bug fix на коленке, происходит когда нажимаешь "Назад" в браузере
+      // location.reload(); // bug fix на коленке, происходит когда нажимаешь "Назад" в браузере
     };
   };
    
