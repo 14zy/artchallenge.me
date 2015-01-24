@@ -89,7 +89,7 @@ function getart() {
   var art = document.getElementById("art");
   window.truePainter = window.currentSet[Math.floor((Math.random()*window.currentSet.length))];
 
-  $.getJSON("http://178.62.133.139/painters/" + window.truePainter + "/data.json", function(json) {
+  $.getJSON("painters json/" + window.truePainter + "/data.json", function(json) {
       
       $("#currentSetImg")[0].src="pics/sets/" + window.currentSetName + ".png";
       $("#currentSetTitle")[0].innerHTML = i18n.t("sets." + window.currentSetName, { lng: window.lang }); // Этому тут совсем не место, но больше нигде не работает T_T
