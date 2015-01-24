@@ -191,7 +191,7 @@ function puticons() {
 
 
 function checkAnswer(btn) { 
-$("html, body").animate({ scrollTop: 0 }, "slow");
+$("html, body").animate({ scrollTop: 120 }, "slow");
 var answer = document.getElementById(btn).innerHTML;
 
 if (answer == window.truePainterName) {
@@ -281,7 +281,7 @@ function learnMore() {
   window.msgWrong.remove();
   var learnMoreText = "\
     <div id='learnMoreDiv' style='max-height: 570px; overflow: scroll;'>\
-      <div id='learnMoreInfo'><p><img style='height: 200px; max-width: 170px;' src='painters/" + window.truePainter + "/photo.jpg'></p>\
+      <div id='learnMoreInfo'><p><img style='height: 200px; max-width: 170px;' src='painters json/" + window.truePainter + "/photo.jpg'></p>\
       <p>"+window.years+"<br>"+window.nation+"</p>\
       <p><strong>"+i18n.t("message.genre", { lng: window.lang })+":</strong><br>"+window.genre+"</p>\
       <p><a style='' target='_blank' href='"+window.wiki+"' class='btn btn-primary'>Wikipedia <span class='glyphicon glyphicon-share-alt'></span></a></p>\
