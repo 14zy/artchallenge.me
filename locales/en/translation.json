@@ -146,7 +146,11 @@
     "80": "Piet Mondrian",
     "81": "Pavel Filonov",
     "82": "Joan Miro",
-    "83": "Andy Warhol"
+    "83": "Andy Warhol",
+    "84": "Valentin Serov",
+    "85": "Alexei Harlamov",
+    "86": "Vasily Tropinin",
+    "87": "Fra Angelico"
   },
   "nation": {
     "Russian": "Russian",
@@ -166,7 +170,9 @@
     "Belarusian": "Belarusian",
     "Czech": "Czech",
     "Greek": "Greek",
-    "Norwegian": "Norwegian"
+    "Norwegian": "Norwegian",
+    "Ukrainian": "Ukrainian",
+    "Swiss": "Swiss"
   },
   "genre": {
     "Romanticism": "Romanticism",
@@ -193,7 +199,11 @@
     "Early Renaissance": "Early Renaissance",
     "Art Deco": "Art Deco",
     "High Renaissance": "High Renaissance",
-    "Aestheticism": "Aestheticism"
+    "Aestheticism": "Aestheticism",
+    "Analytical Realism": "Analytical Realism",
+    "Neoplasticism": "Neoplasticism",
+    "Rococo": "Rococo",
+    "Pop Art": "Pop Art"
   },
   "sets": {
     "basicSet": "Popular painters",

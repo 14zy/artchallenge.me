@@ -146,7 +146,11 @@
     "80": "Пит Мондриан",
     "81": "Павел Филонов",
     "82": "Жоан Миро",
-    "83": "Энди Уорхол"
+    "83": "Энди Уорхол",
+    "84": "Валентин Серов",
+    "85": "Алексей Харламов",
+    "86": "Василий Тропинин",
+    "87": "Фра Анджелико"
   },
   "nation": {
     "Russian": "Русский",
@@ -166,7 +170,9 @@
     "Belarusian": "Белорус",
     "Czech": "Чех",
     "Greek": "Грек",
-    "Norwegian": "Норвежец"
+    "Norwegian": "Норвежец",
+    "Ukrainian": "Ukrainian",
+    "Swiss": "Swiss"
   },
   "genre": {
     "Romanticism": "Романтизм",
@@ -193,7 +199,11 @@
     "Early Renaissance": "Раннее Возрождение",
     "Art Deco": "Ар-деко",
     "High Renaissance": "Высокое Возрождение",
-    "Aestheticism": "Эстетизм"
+    "Aestheticism": "Эстетизм",
+    "Analytical Realism": "Analytical Realism",
+    "Neoplasticism": "Neoplasticism",
+    "Rococo": "Rococo",
+    "Pop Art": "Pop Art"
   },
   "sets": {
     "basicSet": "Популярные художники",
