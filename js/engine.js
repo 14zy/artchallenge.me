@@ -58,12 +58,12 @@ function load() {
 
   window.platform = "painters/" // https://dl.dropboxusercontent.com/u/15486902/painters/ || http://178.62.133.139/painters/ || file:///Users/14zy/Dropbox/Public/painters/ || painters/
   document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
-  window.errorDelay = 3000;
+  window.errorDelay = 5000;
   window.pnotify = "";
   
   //js magic for mobiles
   if (window.innerWidth <= 600) {
-    window.errorDelay = 3000;
+    window.errorDelay = 4000;
     document.getElementById("langDropMenu").className += " pull-right";
     window.pnotify = "stack-mobile";
   };
@@ -239,10 +239,10 @@ if (answer == window.truePainterName) {
 
 else {
 
-  setTimeout(function() {refresh("bad");}, 3500)
+  setTimeout(function() {refresh("bad");}, 5000)
   window.msgWrong = new PNotify({
       title: badPhrase(),
-      text:  i18n.t("message.wrong-desc", { lng: window.lang }) + " " + window.truePainterName + "<br><br><img src='" + "painters/" + window.truePainter + "/photo.jpg' style='width: 100px;'><br><br><a id='btnLearnMore' onTouchStart='learnMore();' onclick='learnMore();' class='btn btn-primary'>" + i18n.t("message.learn-more", { lng: window.lang }) + "</a>",
+      text: i18n.t("message.wrong-desc", { lng: window.lang }) + " " + window.truePainterName + "!" + "<div style='text-align: center'><img src='painters/" + window.truePainter + "/photo.jpg' style='width: 70%; margin: 10px 0 10px 0'><br><br><a id='btnLearnMore' onTouchStart='learnMore();' onclick='learnMore();' class='btn-lg btn-primary'><span class='glyphicon glyphicon-search'></span> " + i18n.t("message.learn-more", { lng: window.lang }) + "</a><br><br>", //<hr><p>Обещаю выучить все произведения данного художника<br><br><a style='margin: 5px;' class='btn btn-success'><span class='glyphicon glyphicon-share-alt'></span> Дать обещание</a></p></div>
       type: 'error',
       icon: 'glyphicon glyphicon-remove',
       hide: true,

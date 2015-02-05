@@ -91,6 +91,11 @@
   width: 42px;
 }
 
+#btnLearnMore:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+
 
 @media (max-width: 992px) {
   
