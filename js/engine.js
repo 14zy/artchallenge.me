@@ -242,7 +242,7 @@ else {
   setTimeout(function() {refresh("bad");}, 5000)
   window.msgWrong = new PNotify({
       title: badPhrase(),
-      text: i18n.t("message.wrong-desc", { lng: window.lang }) + " " + window.truePainterName + "!" + "<div style='text-align: center'><img src='painters/" + window.truePainter + "/photo.jpg' style='width: 70%; margin: 10px 0 10px 0'><br><br><a id='btnLearnMore' onTouchStart='learnMore();' onclick='learnMore();' class='btn-lg btn-primary'><span class='glyphicon glyphicon-search'></span> " + i18n.t("message.learn-more", { lng: window.lang }) + "</a><br><br>", //<hr><p>Обещаю выучить все произведения данного художника<br><br><a style='margin: 5px;' class='btn btn-success'><span class='glyphicon glyphicon-share-alt'></span> Дать обещание</a></p></div>
+      text: "<div style='text-align: center'>" + "<img src='painters/" + window.truePainter + "/photo.jpg' style='width: 70%; margin: 10px 0 10px 0'><br><p style='font-size: 18px'>" + i18n.t("message.wrong-desc", { lng: window.lang }) + " " + window.truePainterName + "!</p><a id='btnLearnMore' onTouchStart='learnMore();' onclick='learnMore();' class='btn btn-primary'><span class='glyphicon glyphicon-search'></span> " + i18n.t("message.learn-more", { lng: window.lang }) + "</a><br><br>", //<hr><p>Обещаю выучить все произведения данного художника<br><br><a style='margin: 5px;' class='btn btn-success'><span class='glyphicon glyphicon-share-alt'></span> Дать обещание</a></p></div>
       type: 'error',
       icon: 'glyphicon glyphicon-remove',
       hide: true,
