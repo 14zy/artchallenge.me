@@ -213,9 +213,12 @@
     "Pop Art": "Pop Art"
   },
   "sets": {
-    "basicSet": "Popular painters",
-    "newSet": "Dmitry Collection",
-    "russianSet": "Russian painters",
-    "impressionismSet" : "Impressionists"
+    "basicSet": "Most popular painters",
+    "allSet": "All painters",
+    "impressionismSet" : "Impressionists and Post-Impressionists",
+    "renaissanceSet": "Renaissance painters",
+    "realismSet": "Realism painters",
+    "russianSet": "Collection of Russian painters",
+    "frenchSet": "Collection of French painters"
   }
 }
