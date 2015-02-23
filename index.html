@@ -31,24 +31,68 @@
       <div class="header">                
 
         <ul class="nav nav-pills pull-right">          
-
           <div class="btn-group sets" style="margin-top: -10px;">
             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="border: none;">
               <img id="currentSetImg" src="pics/sets/basicSet.png" alt="">
               <span id="currentSetTitle"></span> <span class="caret"></span>
             </button>
-            <ul class="dropdown-menu pull-right" role="menu">
-              <br>
-              <li><a class="lang" id="allSet" onclick="changeSet('allSet');" title=""><img src="pics/sets/allSet.png" alt=""> <span data-i18n="sets.allSet"></span></a></li>
-              <li><a class="lang" id="basicSet" onclick="changeSet('basicSet');" title=""><img src="pics/sets/basicSet.png" alt=""> <span data-i18n="sets.basicSet"></span></a></li>
-              <hr>
-              <li><a class="lang" id="renaissanceSet" onclick="changeSet('renaissanceSet');" title=""><img src="pics/sets/renaissanceSet.png" alt=""> <span data-i18n="sets.renaissanceSet"></span></a></li>
-              <li><a class="lang" id="impressionismSet" onclick="changeSet('impressionismSet');" title=""><img src="pics/sets/impressionismSet.png" alt=""> <span data-i18n="sets.impressionismSet"></span></a></li>
-              <li><a class="lang" id="realismSet" onclick="changeSet('realismSet');" title=""><img src="pics/sets/realismSet.png" alt=""> <span data-i18n="sets.realismSet"></span></a></li>
-              <hr>
-              <li><a class="lang" id="russianSet" onclick="changeSet('russianSet');" title=""><img src="pics/sets/russianSet.png" alt=""> <span data-i18n="sets.russianSet"></span></a></li>
-              <li><a class="lang" id="frenchSet" onclick="changeSet('frenchSet');" title=""><img src="pics/sets/frenchSet.png" alt=""> <span data-i18n="sets.frenchSet"></span></a></li>
-              <br>
+            <ul class="dropdown-menu pull-right sets-ul" role="menu">
+              <li>
+                <a class="lang" id="basicSet" onclick="changeSet('basicSet');" title="">
+                  <img src="pics/sets/basicSet.png" alt="">
+                  <span data-i18n="sets.basicSet"></span>
+                  <br><span data-i18n="sets.basicSet-desc" class="text-muted small"></span>
+                  <br><span data-i18n="sets.basicSet-count" class="text-muted small"></span>
+                </a>
+              </li>
+              <li>
+                <a class="lang" id="renaissanceSet" onclick="changeSet('renaissanceSet');" title="">
+                  <img src="pics/sets/renaissanceSet.png" alt="">
+                  <span data-i18n="sets.renaissanceSet"></span>
+                  <br><span data-i18n="sets.renaissanceSet-desc" class="text-muted small"></span>
+                  <br><span data-i18n="sets.renaissanceSet-count" class="text-muted small"></span>
+                </a>
+              </li>
+              <li>
+                <a class="lang" id="impressionismSet" onclick="changeSet('impressionismSet');" title="">
+                  <img src="pics/sets/impressionismSet.png" alt="">
+                  <span data-i18n="sets.impressionismSet"></span>
+                  <br><span data-i18n="sets.impressionismSet-desc" class="text-muted small"></span>
+                  <br><span data-i18n="sets.impressionismSet-count" class="text-muted small"></span>
+                </a>
+              </li>
+              <li>
+                <a class="lang" id="realismSet" onclick="changeSet('realismSet');" title="">
+                  <img src="pics/sets/realismSet.png" alt="">
+                  <span data-i18n="sets.realismSet"></span>
+                  <br><span data-i18n="sets.realismSet-desc" class="text-muted small"></span>
+                  <br><span data-i18n="sets.realismSet-count" class="text-muted small"></span>
+                </a>
+              </li>
+              <li>
+                <a class="lang" id="russianSet" onclick="changeSet('russianSet');" title="">
+                  <img src="pics/sets/russianSet.png" alt="">
+                  <span data-i18n="sets.russianSet"></span>
+                  <br><span data-i18n="sets.russianSet-desc" class="text-muted small"></span>
+                  <br><span data-i18n="sets.russianSet-count" class="text-muted small"></span>
+                </a>
+              </li>
+              <li>
+                <a class="lang" id="frenchSet" onclick="changeSet('frenchSet');" title="">
+                  <img src="pics/sets/frenchSet.png" alt="">
+                  <span data-i18n="sets.frenchSet"></span>
+                  <br><span data-i18n="sets.frenchSet-desc" class="text-muted small"></span>
+                  <br><span data-i18n="sets.frenchSet-count" class="text-muted small"></span>
+                </a>
+              </li>
+              <li>
+                <a class="lang" id="allSet" onclick="changeSet('allSet');" title="">
+                  <img src="pics/sets/allSet.png" alt="">
+                  <span data-i18n="sets.allSet"></span>
+                  <br><span data-i18n="sets.allSet-desc" class="text-muted small"></span>
+                  <br><span data-i18n="sets.allSet-count" class="text-muted small"></span>
+                </a>
+              </li>
             </ul>
           </div>
         </ul>
@@ -123,11 +167,12 @@
           
           <!-- <h3 data-i18n="desc.press">Пресса о нас:</h3>
           <p><a target="_blank" href="http://tvrain.ru/articles/poslednij_vypusk_iskusstvennogo_otbora_v_ezhednevnom_formate_igra_v_prjamom_efire-367802/"><img class="press" src="pics/press/tvrain.png"></a></p> -->
+        
+          <h3 data-i18n="desc.settings">Options:</h3>          
+          <span data-i18n="desc.swear">Swearing</span>: <span data-i18n="desc.swear-on" id="btnOn" onclick="begood(0); yaCounter24934448.reachGoal('PROFANITY-ON'); return true;">On</span> / <span data-i18n="desc.swear-off" id="btnOff" onclick="begood(1); yaCounter24934448.reachGoal('PROFANITY-OFF'); return true;">Off</span>
         </div>
         
         <div class="col-lg-5 desc">
-          <h3 data-i18n="desc.settings">Options:</h3>          
-          <span data-i18n="desc.swear">Swearing</span>: <span data-i18n="desc.swear-on" id="btnOn" onclick="begood(0); yaCounter24934448.reachGoal('PROFANITY-ON'); return true;">On</span> / <span data-i18n="desc.swear-off" id="btnOff" onclick="begood(1); yaCounter24934448.reachGoal('PROFANITY-OFF'); return true;">Off</span>
           
           <h3 data-i18n="desc.how-help">How can I help?</h3>
           <span data-i18n="desc.how-help-desc">If you like this site, could you be so kind to share it with your friends?</span><br>
@@ -149,11 +194,16 @@
             <p style="padding: 5px 0 5px 0; color: gray; font-size: 12px;"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span> Никакого спама. Только замечательные новости из мира искусства.</p>
           </div>
           
-          <a target="_blank" href="http://facebook.com/artchallenge.me" title="ArtChallenge Facebook page" onclick="yaCounter24934448.reachGoal('FB-CLICK'); return true;">
-            <img src="pics/socialmedia/fb.png">
-          </a>
-          <a target="_blank" href="http://vk.com/art.challenge" title="Сообщество ArtChallenge ВКонтакте" onclick="yaCounter24934448.reachGoal('VK-CLICK'); return true;">
-            <img src="pics/socialmedia/vk.png">
+          <a target="_blank" href="http://facebook.com/artchallenge.me" title="Art Challenge Facebook page" onclick="yaCounter24934448.reachGoal('FB-CLICK'); return true;">
+            <img src="pics/socialmedia/facebook.png" width="16"> Art Challenge в Facebook
+          </a><br>
+
+          <a target="_blank" href="http://vk.com/art.challenge" title="Сообщество Art Challenge ВКонтакте" onclick="yaCounter24934448.reachGoal('VK-CLICK'); return true;">
+            <img src="pics/socialmedia/vkontakte.png" width="16"> Art Challenge в ВКонтакте
+          </a><br>
+
+          <a target="_blank" href="https://twitter.com/ArtChallenge_ru" title="Аккаунт Art Challenge в Twitter" onclick="yaCounter24934448.reachGoal('TW-CLICK'); return true;">
+            <img src="pics/socialmedia/twitter.png" width="16"> Art Challenge в Twitter
           </a>
           
         </div>

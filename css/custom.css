@@ -60,9 +60,10 @@
 }
 
 .lang-active {
-  font-weight: bold!important;
-  color: black!important;
+  background-color: rgb(245,245,245);
+  cursor: default;
 }
+
 
 .top-icons {
   color: lightgray;
@@ -94,6 +95,27 @@
 #btnLearnMore:hover {
   cursor: pointer;
   text-decoration: none;
+}
+
+
+
+.sets-ul {
+  width: 500px;
+}
+
+.sets-ul span{
+  white-space: normal;
+}
+
+.sets-ul img{
+  margin-top: 2px;
+  padding-right: 7px;
+  width: 64px;
+  float: left;
+}
+
+.sets-ul li{
+  padding: 7px 0 7px 0;
 }
 
 
@@ -209,6 +231,11 @@
   #btn1,#btn2,#btn3,#btn4 {  
     margin: 5px 10px 0 10px;
   }
+  
+  .sets-ul {
+    width: 300px;
+  }
+  
     
   
 }

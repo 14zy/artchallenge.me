@@ -112,7 +112,10 @@ function getart() {
         window.bio = json.bio[window.lang];
       } else {
         window.bio = json.bio.ru;
-      }
+      };
+      if (window.bio == "") {
+        window.bio = "Просим не гневаться, но биография художника временно отсутствует, если вы знаете хороший источник, пожалуйста, сообщите нам на <a href='mailto:report@artchallenge.ru'>report@artchallenge.ru</a>.<br><br>Sorry, but biography is not available for this painter, if you have a good one, please contact us at <a href='mailto:report@artchallenge.ru'>report@artchallenge.ru</a>."
+      };
       window.nation = undefined;
       json.nationality.forEach(function(entry) {
         if (window.nation == undefined) {
@@ -246,7 +249,7 @@ else {
   setTimeout(function() {refresh("bad");}, 5000)
   window.msgWrong = new PNotify({
       title: badPhrase(),
-      text: "<div style='text-align: center'>" + "<img src='painters/" + window.truePainter + "/photo.jpg' style='width: 60%; margin: 10px 0 10px 0'><br><p style='font-size: 18px'>" + i18n.t("message.wrong-desc", { lng: window.lang }) + " " + window.truePainterName + "!</p><a id='btnLearnMore' onTouchStart='learnMore();' onclick='learnMore();' class='btn btn-primary'><span class='glyphicon glyphicon-search'></span> " + i18n.t("message.learn-more", { lng: window.lang }) + "</a><br></div>", //<hr><p>Обещаю выучить все произведения данного художника<br><br><a style='margin: 5px;' class='btn btn-success'><span class='glyphicon glyphicon-share-alt'></span> Дать обещание</a></p></div>
+      text: "<div style='text-align: left'>" + "<img src='painters/" + window.truePainter + "/photo.jpg' style='width: 60%; margin: 10px 0 10px 0'><br><p style='font-size: 18px'>" + i18n.t("message.wrong-desc", { lng: window.lang }) + " " + window.truePainterName + "!</p><a id='btnLearnMore' onTouchStart='learnMore();' onclick='learnMore();' class='btn btn-primary'><span class='glyphicon glyphicon-search'></span> " + i18n.t("message.learn-more", { lng: window.lang }) + "</a><br></div>", //<hr><p>Обещаю выучить все произведения данного художника<br><br><a style='margin: 5px;' class='btn btn-success'><span class='glyphicon glyphicon-share-alt'></span> Дать обещание</a></p></div>
       type: 'error',
       icon: 'glyphicon glyphicon-remove',
       hide: true,
@@ -471,37 +474,37 @@ function changeSet(value) {
     switch(value) {
 
       case "allSet":
-        window.currentSet = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93];
+        window.currentSet = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117];
         setCookie('currentSet',value,360);
         break;
 
       case "impressionismSet":
-        window.currentSet = [2,3,9,10,14,16,17,21,30,36,49,53,57,60,61,69,77,84];
+        window.currentSet = [2,3,9,10,14,16,17,21,30,36,49,53,57,60,61,69,77,84,94,96];
         setCookie('currentSet',value,360);
         break;
 
       case "renaissanceSet":
-        window.currentSet = [24,35,39,41,42,45,50,55,87,89,90,91,92];
+        window.currentSet = [24,35,39,41,42,45,50,55,87,89,90,91,92,95,98,100,101,104,106,108,110,111,112,114];
         setCookie('currentSet',value,360);
         break;
 
       case "realismSet":
-        window.currentSet = [3,5,8,17,18,25,37,47,48,58,60,65,67,84,85];
+        window.currentSet = [3,5,8,17,18,25,37,47,48,58,60,65,67,84,85,113,116,117];
         setCookie('currentSet',value,360);
         break;
         
       case "russianSet":
-        window.currentSet = [3,4,5,6,8,10,11,12,13,16,19,20,23,25,26,27,31,37,38,44,47,48,76,81,84,85,86];
+        window.currentSet = [3,4,5,6,8,10,11,12,13,16,19,20,23,25,26,27,31,37,38,44,47,48,76,81,84,85,86,103,105,107,109,113,115];
         setCookie('currentSet',value,360);
         break;
 
       case "frenchSet":
-        window.currentSet = [2,9,17,30,36,40,49,53,57,58,61,64,65,69,70,73,75,77,93];
+        window.currentSet = [2,9,17,30,36,40,49,53,57,58,61,64,65,69,70,73,75,77,93,94,96,97];
         setCookie('currentSet',value,360);
         break;
 
       default:
-        window.currentSet = [1,4,5,7,8,9,14,15,17,19,21,22,24,25,26,27,28,29,30,33,36,39,40,41,42,43,44,45,47,49,53,54,55,57,63,72,83,73];
+        window.currentSet = [1,4,5,7,8,9,14,15,17,19,21,22,24,25,26,27,28,29,30,33,36,39,40,41,42,43,44,45,47,49,53,54,55,57,63,72,83,73,95,112];
         document.cookie = "currentSet=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
     };
 
