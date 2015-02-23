@@ -37,8 +37,15 @@
 
 
 #langMainDiv {
-  margin: -39px 0 0 150px;
+  margin-top: -40px;
+  float: right;
 }
+
+#langMainDiv img{
+  margin-top: -2px;
+  width: 24px;
+}
+
 
 .lang-area {
   color: gray;
@@ -46,6 +53,10 @@
 
 .lang {
   cursor: pointer;
+}
+
+.logo {
+  color: gray;
 }
 
 .logo:hover {
@@ -118,6 +129,8 @@
   padding: 7px 0 7px 0;
 }
 
+
+.up { bottom:100% !important; top:auto !important; }
 
 @media (max-width: 992px) {
   
