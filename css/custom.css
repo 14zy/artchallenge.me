@@ -36,10 +36,9 @@
 }
 
 
-#langMainDiv {
+/*#langMainDiv {
   margin-top: -40px;
-  float: right;
-}
+} */
 
 #langMainDiv img{
   margin-top: -2px;
@@ -179,10 +178,10 @@
     margin-right: -15px;
   }
       
-  #langMainDiv {
+/*  #langMainDiv {
     text-align: right;
   }
-  
+*/  
   #btn1,#btn2,#btn3,#btn4 {
 /*    border-radius: 0;*/
     display: block;

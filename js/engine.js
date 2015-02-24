@@ -58,12 +58,12 @@ function load() {
 
   window.platform = "painters/" // https://dl.dropboxusercontent.com/u/15486902/painters/ || http://178.62.133.139/painters/ || file:///Users/14zy/Dropbox/Public/painters/ || painters/
   document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
-  window.errorDelay = 5000;
+  window.errorDelay = 3500;
   window.pnotify = "";
   
   //js magic for mobiles
   if (window.innerWidth <= 600) {
-    window.errorDelay = 4000;
+    window.errorDelay = 3000;
     // document.getElementById("langDropMenu").className += " pull-right";
     window.pnotify = "stack-mobile";
   };
@@ -246,7 +246,7 @@ if (answer == window.truePainterName) {
 
 else {
 
-  setTimeout(function() {refresh("bad");}, 5000)
+  setTimeout(function() {refresh("bad");}, 4200)
   window.msgWrong = new PNotify({
       title: badPhrase(),
       text: "<div style='text-align: left'>" + "<img src='painters/" + window.truePainter + "/photo.jpg' style='width: 60%; margin: 10px 0 10px 0'><br><p style='font-size: 18px'>" + i18n.t("message.wrong-desc", { lng: window.lang }) + " " + window.truePainterName + "!</p><a id='btnLearnMore' onTouchStart='learnMore();' onclick='learnMore();' class='btn btn-primary'><span class='glyphicon glyphicon-search'></span> " + i18n.t("message.learn-more", { lng: window.lang }) + "</a><br></div>", //<hr><p>Обещаю выучить все произведения данного художника<br><br><a style='margin: 5px;' class='btn btn-success'><span class='glyphicon glyphicon-share-alt'></span> Дать обещание</a></p></div>
@@ -356,14 +356,13 @@ function winner() {
       icon: "glyphicon glyphicon-thumbs-up",
       addclass: window.pnotify,
       buttons: {
-        closer: false,
+        closer: true,
         sticker: false
       },
       history: {
         history: true,
         menu: false
       }
-      
   });
   document.getElementById("icon10").style.color = "rgb(53,115,45)";
   yaCounter24934448.reachGoal('WINNER');
@@ -417,11 +416,6 @@ function ShareMM() {
 };
     
 function refresh(sign,scroll){
-  if (sign == "bad") {
-    for (var i=1; i < 10; i++ ) {
-        document.getElementById("icon"+i).style.color = "lightgray";                
-    }; 
-  };
 
   document.getElementById("btn1").onclick = function() { checkAnswer('btn1'); };
   document.getElementById("btn1").style.background = "";
@@ -438,9 +432,16 @@ function refresh(sign,scroll){
 
   document.getElementById("art").src = "pics/loading.svg";
   if (scroll != false) {
-    $("html, body").animate({ scrollTop: 120 }, "slow");
+    $("html, body").animate({ scrollTop: 90 }, "slow");
   }
   getart();
+  
+  if (sign == "bad") {
+    window.counter=1;
+    for (var i=1; i <= 10; i++ ) {
+      document.getElementById("icon"+i).style.color = "lightgray";                
+    }; 
+  };
 }
 
 function begood(value){
@@ -509,6 +510,5 @@ function changeSet(value) {
     };
 
     document.getElementById(value).className="lang-active";
-
     refresh("bad", false);
   }

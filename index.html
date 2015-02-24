@@ -28,9 +28,20 @@
   </head>
   <body>
     <div class="container">
-      <div class="header">                
+      <div class="header"> 
+        <ul class="nav nav-pills pull-right"> 
 
-        <ul class="nav nav-pills pull-right">          
+          <span id="icon1" class="glyphicon glyphicon-ok-sign top-icons"></span>
+          <span id="icon2" class="glyphicon glyphicon-ok-sign top-icons"></span>
+          <span id="icon3" class="glyphicon glyphicon-ok-sign top-icons"></span>
+          <span id="icon4" class="glyphicon glyphicon-ok-sign top-icons"></span>
+          <span id="icon5" class="glyphicon glyphicon-ok-sign top-icons"></span>
+          <span id="icon6" class="glyphicon glyphicon-ok-sign top-icons"></span>
+          <span id="icon7" class="glyphicon glyphicon-ok-sign top-icons"></span>
+          <span id="icon8" class="glyphicon glyphicon-ok-sign top-icons"></span>
+          <span id="icon9" class="glyphicon glyphicon-ok-sign top-icons"></span>
+          <span id="icon10" class="glyphicon glyphicon-gift top-icons"></span>   
+ 
           <div class="btn-group sets" style="margin-top: -10px;">
             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="border: none;">
               <img id="currentSetImg" src="pics/sets/basicSet.png" alt="">
@@ -105,17 +116,6 @@
       <div style="text-align: center">
         <div id="corner" class="panel panel-default">
           <br>
-          <span id="icon1" class="glyphicon glyphicon-ok-sign top-icons"></span>
-          <span id="icon2" class="glyphicon glyphicon-ok-sign top-icons"></span>
-          <span id="icon3" class="glyphicon glyphicon-ok-sign top-icons"></span>
-          <span id="icon4" class="glyphicon glyphicon-ok-sign top-icons"></span>
-          <span id="icon5" class="glyphicon glyphicon-ok-sign top-icons"></span>
-          <span id="icon6" class="glyphicon glyphicon-ok-sign top-icons"></span>
-          <span id="icon7" class="glyphicon glyphicon-ok-sign top-icons"></span>
-          <span id="icon8" class="glyphicon glyphicon-ok-sign top-icons"></span>
-          <span id="icon9" class="glyphicon glyphicon-ok-sign top-icons"></span>
-          <span id="icon10" class="glyphicon glyphicon-gift top-icons"></span>
-          <br><br>
           <img id="art" src="pics/loading.svg">
 
           <br><br>
@@ -152,8 +152,30 @@
           <!-- <h3 data-i18n="desc.press">Пресса о нас:</h3>
           <p><a target="_blank" href="http://tvrain.ru/articles/poslednij_vypusk_iskusstvennogo_otbora_v_ezhednevnom_formate_igra_v_prjamom_efire-367802/"><img class="press" src="pics/press/tvrain.png"></a></p> -->
         
-          <h3 data-i18n="desc.settings">Options:</h3>          
-          <span data-i18n="desc.swear">Swearing</span>: <span data-i18n="desc.swear-on" id="btnOn" onclick="begood(0); yaCounter24934448.reachGoal('PROFANITY-ON'); return true;">On</span> / <span data-i18n="desc.swear-off" id="btnOff" onclick="begood(1); yaCounter24934448.reachGoal('PROFANITY-OFF'); return true;">Off</span>          
+          <h3 data-i18n="desc.settings">Options:</h3>
+          
+
+
+          
+          <span data-i18n="desc.swear">Swearing</span>: <span data-i18n="desc.swear-on" id="btnOn" onclick="begood(0); yaCounter24934448.reachGoal('PROFANITY-ON'); return true;">On</span> / <span data-i18n="desc.swear-off" id="btnOff" onclick="begood(1); yaCounter24934448.reachGoal('PROFANITY-OFF'); return true;">Off</span>
+          
+          <div id="langMainDiv">
+          <span data-i18n="desc.lang">Language</span>:
+          <div class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="border: none;">
+              <img id="langMain" src="pics/flags/EN.png" alt="" width="32">
+              </button>
+              <ul id="langDropMenu" class="dropdown-menu up" role="menu">
+                <li><a class="lang" id="ru" onclick="setLang('ru'); yaCounter24934448.reachGoal('LANG-RU'); return true;" title="Russian version"><img src="pics/flags/RU.png" alt="Русский"> Русский</a></li>
+                <li><a class="lang" id="en" onclick="setLang('en'); yaCounter24934448.reachGoal('LANG-EN'); return true;" title="English version"><img src="pics/flags/EN.png" alt="English"> English</a></li>
+                <li><a class="lang" id="de" onclick="setLang('de'); yaCounter24934448.reachGoal('LANG-DE'); return true;" title="Deutsch version"><img src="pics/flags/DE.png" alt="Deutsch"> Deutsch</a></li>
+                <li><a class="lang" id="fr" onclick="setLang('fr'); yaCounter24934448.reachGoal('LANG-FR'); return true;" title="Français version"><img src="pics/flags/FR.png" alt="Deutsch"> Français</a></li>
+                <li><a class="lang" id="es" onclick="setLang('es'); yaCounter24934448.reachGoal('LANG-ES'); return true;" title="Español version"><img src="pics/flags/ES.png" alt="Español"> Español</a></li>
+                <li><a class="lang" id="it" onclick="setLang('it'); yaCounter24934448.reachGoal('LANG-IT'); return true;" title="Italiana version"><img src="pics/flags/IT.png" alt="Italiana"> Italiano</a></li>
+              </ul>
+            </div>
+          </div>
+          
         </div>
         
         <div class="col-lg-5 desc">
@@ -198,21 +220,7 @@
       <div class="footer" style="text-align: left">
         <p>&copy; <span data-i18n="footer.created">Created by</span> <a target="_blank" href="http://facebook.com/just14zy" title="Ruben Babaev"><img style="margin-bottom: 7px;" height="20" width="20" src="pics/ruben.jpg" alt="Ruben Babaev"><span data-i18n="footer.ruben">Ruben</span></a> <span data-i18n="footer.and">and</span> <a target="_blank" href="http://facebook.com/plotkina.anna" title="Anna Plotkina"><img style="margin: 0 3px 4px 0;" height="18" width="18" src="pics/anna.jpg" alt="Anna Plotkina"><span data-i18n="footer.anna">Anna</span></a> <span data-i18n="footer.year">in 2014</span>.
 
-        <div id="langMainDiv">
-          <div class="btn-group">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="border: none;">
-            <span data-i18n="desc.lang">Language</span>: <img id="langMain" src="pics/flags/EN.png" alt="" width="32"> <span class="glyphicon glyphicon-menu-up small text-muted" aria-hidden="true"></span>
-            </button>
-            <ul id="langDropMenu" class="dropdown-menu up pull-right" role="menu">
-              <li><a class="lang" id="ru" onclick="setLang('ru'); yaCounter24934448.reachGoal('LANG-RU'); return true;" title="Russian version"><img src="pics/flags/RU.png" alt="Русский"> Русский</a></li>
-              <li><a class="lang" id="en" onclick="setLang('en'); yaCounter24934448.reachGoal('LANG-EN'); return true;" title="English version"><img src="pics/flags/EN.png" alt="English"> English</a></li>
-              <li><a class="lang" id="de" onclick="setLang('de'); yaCounter24934448.reachGoal('LANG-DE'); return true;" title="Deutsch version"><img src="pics/flags/DE.png" alt="Deutsch"> Deutsch</a></li>
-              <li><a class="lang" id="fr" onclick="setLang('fr'); yaCounter24934448.reachGoal('LANG-FR'); return true;" title="Français version"><img src="pics/flags/FR.png" alt="Deutsch"> Français</a></li>
-              <li><a class="lang" id="es" onclick="setLang('es'); yaCounter24934448.reachGoal('LANG-ES'); return true;" title="Español version"><img src="pics/flags/ES.png" alt="Español"> Español</a></li>
-              <li><a class="lang" id="it" onclick="setLang('it'); yaCounter24934448.reachGoal('LANG-IT'); return true;" title="Italiana version"><img src="pics/flags/IT.png" alt="Italiana"> Italiano</a></li>
-            </ul>
-          </div>
-        </div>
+
 
       </div>
     </div> <!-- /container -->
