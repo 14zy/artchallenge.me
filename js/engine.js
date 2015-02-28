@@ -55,7 +55,7 @@ function load() {
     setLang(lang);
   };
 
-  window.platform = "painters/" // https://dl.dropboxusercontent.com/u/15486902/painters/ || http://178.62.133.139/painters/ || file:///Users/14zy/Dropbox/Public/painters/ || painters/
+  window.platform = "http://artchallenge.me/painters/";
   document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
 
   window.errorDelay = 3500;
@@ -87,7 +87,7 @@ function getart() {
   var art = document.getElementById("art");
   window.truePainter = window.currentSet[Math.floor((Math.random()*window.currentSet.length))];
 
-  $.getJSON("painters/" + window.truePainter + "/data.json", function(json) {
+  $.getJSON(window.platform + window.truePainter + "/data.json", function(json) {
       
       $("#currentSetImg")[0].src="pics/sets/" + window.currentSetName + ".png";
       $("#currentSetTitle")[0].innerHTML = i18n.t("sets." + window.currentSetName, { lng: window.lang }); // Этому тут совсем не место, но больше нигде не работает T_T
@@ -245,7 +245,7 @@ else {
   setTimeout(function() {refresh("bad");}, 4000)
   window.msgWrong = new PNotify({
       title: badPhrase(),
-      text: "<div style='text-align: left'>" + "<img src='painters/" + window.truePainter + "/photo.jpg' style='width: 60%; margin: 10px 0 10px 0'><br><p style='font-size: 18px'>" + i18n.t("message.wrong-desc", { lng: window.lang }) + " " + window.truePainterName + "!</p><a id='btnLearnMore' onTouchStart='learnMore();' onclick='learnMore();' class='btn btn-primary'><span class='glyphicon glyphicon-search'></span> " + i18n.t("message.learn-more", { lng: window.lang }) + "</a><br></div>", //<hr><p>Обещаю выучить все произведения данного художника<br><br><a style='margin: 5px;' class='btn btn-success'><span class='glyphicon glyphicon-share-alt'></span> Дать обещание</a></p></div>
+      text: "<div style='text-align: left'>" + "<img src='" + window.platform + window.truePainter + "/photo.jpg' style='width: 60%; margin: 10px 0 10px 0'><br><p style='font-size: 18px'>" + i18n.t("message.wrong-desc", { lng: window.lang }) + " " + window.truePainterName + "!</p><a id='btnLearnMore' onTouchStart='learnMore();' onclick='learnMore();' class='btn btn-primary'><span class='glyphicon glyphicon-search'></span> " + i18n.t("message.learn-more", { lng: window.lang }) + "</a><br></div>", //<hr><p>Обещаю выучить все произведения данного художника<br><br><a style='margin: 5px;' class='btn btn-success'><span class='glyphicon glyphicon-share-alt'></span> Дать обещание</a></p></div>
       type: 'error',
       icon: 'glyphicon glyphicon-remove',
       hide: true,
@@ -283,7 +283,7 @@ function learnMore() {
   window.msgWrong.remove();
   var learnMoreText = "\
     <div id='learnMoreDiv' style='max-height: 570px; overflow: scroll;'>\
-      <div id='learnMoreInfo'><p><img style='height: 200px; max-width: 170px;' src='painters/" + window.truePainter + "/photo.jpg'></p>\
+      <div id='learnMoreInfo'><p><img style='height: 200px; max-width: 170px;' src='" + window.platform + window.truePainter + "/photo.jpg'></p>\
       <p>"+window.years+"<br>"+window.nation+"</p>\
       <p><strong>"+i18n.t("message.genre", { lng: window.lang })+":</strong><br>"+window.genre+"</p>\
       <p><a style='' target='_blank' href='"+window.wiki+"' class='btn btn-primary'>Wikipedia <span class='glyphicon glyphicon-share-alt'></span></a></p>\
