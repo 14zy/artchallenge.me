@@ -17,7 +17,6 @@ function setLang(lang) {
     document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
     refresh("bad",false);
   };
-
   window.lang = lang;
   i18n.init({ lng: lang });
   i18n.init(function(t) {
@@ -58,25 +57,22 @@ function load() {
 
   window.platform = "painters/" // https://dl.dropboxusercontent.com/u/15486902/painters/ || http://178.62.133.139/painters/ || file:///Users/14zy/Dropbox/Public/painters/ || painters/
   document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+
   window.errorDelay = 3500;
   window.pnotify = "";
-  
   //js magic for mobiles
   if (window.innerWidth <= 600) {
     window.errorDelay = 3000;
-    // document.getElementById("langDropMenu").className += " pull-right";
     window.pnotify = "stack-mobile";
   };
 
-  window.currentSetName = getCookie("currentSet");
-  if (window.currentSetName == "") {
+  if (getCookie("currentSet") == "") {
     window.currentSetName="basicSet";
-    window.currentSet = [4,45,15,28,54,55,24,1,5,7,8,9,14,17,19,21,22,25,26,27,29,30,33,36,39,40,41,42,43,44,47,49,53,63,57];
+    window.currentSet = [1,4,5,7,8,9,14,15,17,19,21,22,24,25,26,27,28,29,30,33,36,39,40,41,42,43,44,45,47,49,53,54,55,57,63,72,83,73,95,112];
     document.getElementById("basicSet").className="lang-active";
   } else {
-    changeSet(window.currentSetName);  
-  }
-
+    changeSet(getCookie("currentSet"));  
+  };
   getart();
   begood(getCookie("begood"));
 
@@ -86,8 +82,8 @@ function load() {
 load();
 
 function getart() { 
-  //Почему то два раза вызывается при обычной закгрузке, проверить
   currentWins();
+
   var art = document.getElementById("art");
   window.truePainter = window.currentSet[Math.floor((Math.random()*window.currentSet.length))];
 
@@ -98,9 +94,11 @@ function getart() {
 
       window.paintings = json.paintings;
       window.image = Math.floor((Math.random()*window.paintings)+1);
+
       art.src = window.platform + truePainter + "/" + window.image + ".jpg";
 
       window.truePainterName = i18n.t("painters." + truePainter, { lng: window.lang });
+
       window.link = json.link.local;
       if (window.lang == "ru") { //Временно, пока в json не будут ссылки на википедию на всех языках
         window.wiki = json.link.wikipedia.ru;
@@ -136,7 +134,6 @@ function getart() {
 
   }).fail(function() {
     refresh("bad",false);
-    //location.reload(); // bug fix на коленке, когда getJSON не срабатывает
   });
 
   puticons();
@@ -163,7 +160,6 @@ function putButtons(painter) {
     painters.push(randomPainter());
     if (painters[1] == "") {
       refresh("bad",false);
-      //location.reload(); // bug fix на коленке, происходит когда нажимаешь "Назад" в браузере
     };
   };
    
@@ -246,7 +242,7 @@ if (answer == window.truePainterName) {
 
 else {
 
-  setTimeout(function() {refresh("bad");}, 4200)
+  setTimeout(function() {refresh("bad");}, 4000)
   window.msgWrong = new PNotify({
       title: badPhrase(),
       text: "<div style='text-align: left'>" + "<img src='painters/" + window.truePainter + "/photo.jpg' style='width: 60%; margin: 10px 0 10px 0'><br><p style='font-size: 18px'>" + i18n.t("message.wrong-desc", { lng: window.lang }) + " " + window.truePainterName + "!</p><a id='btnLearnMore' onTouchStart='learnMore();' onclick='learnMore();' class='btn btn-primary'><span class='glyphicon glyphicon-search'></span> " + i18n.t("message.learn-more", { lng: window.lang }) + "</a><br></div>", //<hr><p>Обещаю выучить все произведения данного художника<br><br><a style='margin: 5px;' class='btn btn-success'><span class='glyphicon glyphicon-share-alt'></span> Дать обещание</a></p></div>
@@ -439,7 +435,7 @@ function refresh(sign,scroll){
   if (sign == "bad") {
     window.counter=1;
     for (var i=1; i <= 10; i++ ) {
-      document.getElementById("icon"+i).style.color = "lightgray";                
+      document.getElementById("icon"+i).style.color = "lightgray";
     }; 
   };
 }
@@ -469,8 +465,6 @@ function begood(value){
 }
 
 function changeSet(value) {
-    document.getElementById(window.currentSetName).className="lang";
-    window.currentSetName = value;
 
     switch(value) {
 
@@ -510,5 +504,12 @@ function changeSet(value) {
     };
 
     document.getElementById(value).className="lang-active";
-    refresh("bad", false);
+
+    if (window.currentSetName != null) {
+      window.currentSetName =value;
+      refresh("bad", false);
+    } else {
+      window.currentSetName =value;
+    }
   }
+

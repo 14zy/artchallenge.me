@@ -31,17 +31,19 @@
       <div class="header"> 
         <ul class="nav nav-pills pull-right"> 
 
-          <span id="icon1" class="glyphicon glyphicon-ok-sign top-icons"></span>
-          <span id="icon2" class="glyphicon glyphicon-ok-sign top-icons"></span>
-          <span id="icon3" class="glyphicon glyphicon-ok-sign top-icons"></span>
-          <span id="icon4" class="glyphicon glyphicon-ok-sign top-icons"></span>
-          <span id="icon5" class="glyphicon glyphicon-ok-sign top-icons"></span>
-          <span id="icon6" class="glyphicon glyphicon-ok-sign top-icons"></span>
-          <span id="icon7" class="glyphicon glyphicon-ok-sign top-icons"></span>
-          <span id="icon8" class="glyphicon glyphicon-ok-sign top-icons"></span>
-          <span id="icon9" class="glyphicon glyphicon-ok-sign top-icons"></span>
-          <span id="icon10" class="glyphicon glyphicon-gift top-icons"></span>   
- 
+          <span class="top-icons">
+            <span id="icon1" class="glyphicon glyphicon-ok-sign"></span>
+            <span id="icon2" class="glyphicon glyphicon-ok-sign"></span>
+            <span id="icon3" class="glyphicon glyphicon-ok-sign"></span>
+            <span id="icon4" class="glyphicon glyphicon-ok-sign"></span>
+            <span id="icon5" class="glyphicon glyphicon-ok-sign"></span>
+            <span id="icon6" class="glyphicon glyphicon-ok-sign"></span>
+            <span id="icon7" class="glyphicon glyphicon-ok-sign"></span>
+            <span id="icon8" class="glyphicon glyphicon-ok-sign"></span>
+            <span id="icon9" class="glyphicon glyphicon-ok-sign"></span>
+            <span id="icon10" class="glyphicon glyphicon-gift"></span>   
+          </span>
+          
           <div class="btn-group sets" style="margin-top: -10px;">
             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="border: none;">
               <img id="currentSetImg" src="pics/sets/basicSet.png" alt="">
@@ -107,7 +109,6 @@
             </ul>
           </div>
         </ul>
-
         <h3 class="text-muted logo"><a class="logo" href="http://www.artchallenge.me" title="ArtChallenge">Art Challenge</a></h3>
         
       </div>
@@ -163,7 +164,7 @@
           <span data-i18n="desc.lang">Language</span>:
           <div class="btn-group">
             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="border: none;">
-              <img id="langMain" src="pics/flags/EN.png" alt="" width="32">
+              <img id="langMain" src="pics/flags/EN.png" alt="" width="32"> <span class="caret"></span>
               </button>
               <ul id="langDropMenu" class="dropdown-menu up" role="menu">
                 <li><a class="lang" id="ru" onclick="setLang('ru'); yaCounter24934448.reachGoal('LANG-RU'); return true;" title="Russian version"><img src="pics/flags/RU.png" alt="Русский"> Русский</a></li>
@@ -191,7 +192,6 @@
               <form action="//artchallenge.me/post.php" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"  novalidate>
                 <div id="mc_embed_signup_scroll">
                   <input type="email" value="" name="email" style="width: 240px; display: inline;" class="form-control email" id="mce-EMAIL" placeholder="Ваш email" required>
-                  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                   <div style="position: absolute; left: -5000px;"><input type="text" name="b_165c005baa2c83c57008c0656_f3950e7f73" tabindex="-1" value=""></div>
                   <input type="submit" value="Подписаться" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary" style="margin: 5px 0 5px 0">
                 </div>

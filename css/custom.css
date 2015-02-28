@@ -248,6 +248,14 @@
     width: 300px;
   }
   
-    
+  .top-icons {
+    float: left;
+    margin-top: 30px;
+    left: 14px;
+    width: 250px;
+    z-index: 1;
+    position: absolute;
+    font-size: 16px;
+  }
   
 }
