@@ -87,7 +87,8 @@ function getart() {
   var art = document.getElementById("art");
   window.truePainter = window.currentSet[Math.floor((Math.random()*window.currentSet.length))];
 
-  $.getJSON(window.platform + window.truePainter + "/data.json", function(json) {
+  $.getJSON(window.platform + window.truePainter + "/data.json")
+    .done(function(json) {
       
       $("#currentSetImg")[0].src="pics/sets/" + window.currentSetName + ".png";
       $("#currentSetTitle")[0].innerHTML = i18n.t("sets." + window.currentSetName, { lng: window.lang }); // Этому тут совсем не место, но больше нигде не работает T_T
@@ -96,8 +97,6 @@ function getart() {
       window.image = Math.floor((Math.random()*window.paintings)+1);
 
       art.src = window.platform + truePainter + "/" + window.image + ".jpg";
-
-      window.truePainterName = i18n.t("painters." + truePainter, { lng: window.lang });
 
       window.link = json.link.local;
       if (window.lang == "ru") { //Временно, пока в json не будут ссылки на википедию на всех языках
@@ -114,6 +113,9 @@ function getart() {
       if (window.bio == "") {
         window.bio = "Просим не гневаться, но биография художника временно отсутствует, если вы знаете хороший источник, пожалуйста, сообщите нам на <a href='mailto:report@artchallenge.ru'>report@artchallenge.ru</a>.<br><br>Sorry, but biography is not available for this painter, if you have a good one, please contact us at <a href='mailto:report@artchallenge.ru'>report@artchallenge.ru</a>."
       };
+
+      window.truePainterName = i18n.t("painters." + truePainter, { lng: window.lang });
+
       window.nation = undefined;
       json.nationality.forEach(function(entry) {
         if (window.nation == undefined) {
@@ -132,9 +134,10 @@ function getart() {
       });
       putButtons(window.truePainterName);
 
-  }).fail(function() {
-    refresh("bad",false);
-  });
+    })
+    .fail(function() {
+      refresh("bad",false);
+    });
 
   puticons();
 
