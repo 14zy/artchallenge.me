@@ -55,7 +55,7 @@ function load() {
     setLang(lang);
   };
 
-  window.platform = "http://artchallenge.me/painters/";
+  window.platform = "http://artchallenge.me/painters/"; // "painters/";
   document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
 
   window.errorDelay = 3500;
@@ -506,6 +506,7 @@ function changeSet(value) {
     document.getElementById(value).className="lang-active";
 
     if (window.currentSetName != null) {
+      document.getElementById(window.currentSetName).className="lang";
       window.currentSetName =value;
       refresh("bad", false);
     } else {

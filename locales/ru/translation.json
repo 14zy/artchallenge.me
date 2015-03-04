@@ -238,10 +238,10 @@
     "Academic Art": "Academic Art"
   },
   "sets": {
-    "basicSet": "Самые популярные художники",
+    "basicSet": "Популярные художники",
     "basicSet-desc": "Базовая коллекция, состоящая из самых популярных художников.",
     "basicSet-count": "40 художников",
-    "renaissanceSet": "Художники эпохи Возрождения",
+    "renaissanceSet": "Эпоха Возрождения",
     "renaissanceSet-desc": "Коллекция, состоящая из художников эпохи Возрождения.",
     "renaissanceSet-count": "24 художника",
     "impressionismSet" : "Импрессионисты и Постимпрессионисты",
