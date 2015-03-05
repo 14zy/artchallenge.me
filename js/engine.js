@@ -55,7 +55,7 @@ function load() {
     setLang(lang);
   };
 
-  window.platform = "painters/"; //"http://artchallenge.me/painters/"; // "painters/";
+  window.platform = "http://artchallenge.me/painters/"; //"http://artchallenge.me/painters/"; // "painters/";
   document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
 
   window.errorDelay = 3500;
