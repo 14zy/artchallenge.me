@@ -180,7 +180,8 @@
     "114": "Robert Campin",
     "115": "Fyodor Rokotov",
     "116": "Rockwell Kent",
-    "117": "Martiros Saryan"
+    "117": "Martiros Saryan",
+    "118": "Jackson Pollock"
   },
   "nation": {
     "Russian": "Russian",
@@ -235,12 +236,13 @@
     "Rococo": "Rococo",
     "Pop Art": "Pop Art",
     "Socialist Realism": "Socialist Realism",
-    "Academic Art": "Academic Art"
+    "Academic Art": "Academic Art",
+    "Abstract Expressionism": "Abstract Expressionism"
   },
   "sets": {
     "basicSet": "Popular painters",
     "basicSet-desc": "Базовая коллекция, состоящая из самых популярных художников.",
-    "basicSet-count": "40 painters",
+    "basicSet-count": "41 painter",
     "renaissanceSet": "Renaissance",
     "renaissanceSet-desc": "Коллекция, состоящая из художников эпохи Возрождения.",
     "renaissanceSet-count": "24 painters",
@@ -258,6 +260,6 @@
     "frenchSet-count": "22 painters",
     "allSet": "All painters",
     "allSet-desc": "Самая сложная коллекция, в которой чередуются все художники.",
-    "allSet-count": "117 painters"
+    "allSet-count": "118 painters"
   }
 }

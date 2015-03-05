@@ -180,7 +180,8 @@
     "114": "Робер Кампен",
     "115": "Фёдор Рокотов",
     "116": "Рокуэлл Кент",
-    "117": "Мартирос Сарьян"
+    "117": "Мартирос Сарьян",
+    "118": "Джексон Поллок"
   },
   "nation": {
     "Russian": "Русский",
@@ -235,12 +236,13 @@
     "Rococo": "Rococo",
     "Pop Art": "Pop Art",
     "Socialist Realism": "Socialist Realism",
-    "Academic Art": "Academic Art"
+    "Academic Art": "Academic Art",
+    "Abstract Expressionism": "Абстрактный экспрессионизм"
   },
   "sets": {
     "basicSet": "Популярные художники",
     "basicSet-desc": "Базовая коллекция, состоящая из самых популярных художников.",
-    "basicSet-count": "40 художников",
+    "basicSet-count": "41 художник",
     "renaissanceSet": "Эпоха Возрождения",
     "renaissanceSet-desc": "Коллекция, состоящая из художников эпохи Возрождения.",
     "renaissanceSet-count": "24 художника",
@@ -258,6 +260,6 @@
     "frenchSet-count": "22 художника",
     "allSet": "Все художники",
     "allSet-desc": "Самая сложная коллекция, в которой чередуются все художники.",
-    "allSet-count": "117 художников"
+    "allSet-count": "118 художников"
   }
 }

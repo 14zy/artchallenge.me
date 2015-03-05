@@ -55,7 +55,7 @@ function load() {
     setLang(lang);
   };
 
-  window.platform = "http://artchallenge.me/painters/"; // "painters/";
+  window.platform = "painters/"; //"http://artchallenge.me/painters/"; // "painters/";
   document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
 
   window.errorDelay = 3500;
@@ -68,7 +68,7 @@ function load() {
 
   if (getCookie("currentSet") == "") {
     window.currentSetName="basicSet";
-    window.currentSet = [1,4,5,7,8,9,14,15,17,19,21,22,24,25,26,27,28,29,30,33,36,39,40,41,42,43,44,45,47,49,53,54,55,57,63,72,83,73,95,112];
+    window.currentSet = [1,4,5,7,8,9,14,15,17,19,21,22,24,25,26,27,28,29,30,33,36,39,40,41,42,43,44,45,47,49,53,54,55,57,63,72,83,73,95,112,118];
     document.getElementById("basicSet").className="lang-active";
   } else {
     changeSet(getCookie("currentSet"));  
@@ -348,7 +348,7 @@ function badPhrase() {
 function winner() {
   new PNotify({
       title: i18n.t("message.winner", { lng: window.lang }),
-      text: i18n.t("message.winner-desc", { lng: window.lang }) + "<br><br><a onclick='ShareFB();' href='#'><img style='margin-left: 25px;' width='230px' src=pics/badges/winner-badge-"+window.lang+".png></a><br><br><text style='font-size: 16px;'>" + i18n.t("message.share", { lng: window.lang }) + "<br>" + getShares() + "</text>",
+      text: i18n.t("message.winner-desc", { lng: window.lang }) + "<br><br><a onclick='ShareFB();' href='#'><img style='margin-left: 25px;' width='230px' src=pics/badges/" + window.currentSetName + "/winner-badge-"+window.lang+".png></a><br><br><text style='font-size: 16px;'>" + i18n.t("message.share", { lng: window.lang }) + "<br>" + getShares() + "</text>",
       type: 'note',
       hide: false,
       animate_speed: "normal",
@@ -385,19 +385,19 @@ function getShares() {
 
 
 function ShareFB() {
-  url = "https://www.facebook.com/dialog/feed?app_id=263690153811188&display=popup&link=http://artchallenge.me/?utm_source=fb-win&redirect_uri=http://artchallenge.me/1.html&picture=http://artchallenge.me/pics/badges/winner-badge-"+window.lang+"-shareFB.png&source=http://artchallenge.me/pics/badges/winner-badge-"+window.lang+"-shareFB.png&name="+i18n.t("shares.title",{lng: window.lang})+"&caption="+i18n.t("shares.caption",{lng: window.lang})+"&description="+i18n.t("shares.description",{lng: window.lang});      
+  url = "https://www.facebook.com/dialog/feed?app_id=263690153811188&display=popup&link=http://artchallenge.me/?utm_source=fb-win&redirect_uri=http://artchallenge.me/1.html&picture=http://artchallenge.me/pics/badges/" + window.currentSetName + "/winner-badge-"+window.lang+"-shareFB.png&source=http://artchallenge.me/pics/badges/" + window.currentSetName + "/winner-badge-"+window.lang+"-shareFB.png&name="+i18n.t("shares.title",{lng: window.lang})+"&caption="+i18n.t("shares.caption",{lng: window.lang})+"&description="+i18n.t("shares.description",{lng: window.lang});      
   window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
   yaCounter24934448.reachGoal('WINNER-SHARE-FB');
 };
 
 function ShareTW() {
-  url = "http://twitter.com/share?text="+i18n.t("shares.title",{lng: window.lang})+" http://artchallenge.me/pics/badges/winner-badge-"+window.lang+"-shareTW.png &url=http://artchallenge.me/&hashtags=artchallenge";
+  url = "http://twitter.com/share?text="+i18n.t("shares.title",{lng: window.lang})+" http://artchallenge.me/pics/badges/" + window.currentSetName + "/winner-badge-"+window.lang+"-shareTW.png &url=http://artchallenge.me/&hashtags=artchallenge";
   window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
   yaCounter24934448.reachGoal('WINNER-SHARE-TW');
 };
 
 function ShareVK() {
-  url = "http://vk.com/share.php?url=http://artchallenge.me/?utm_source=vk-win&title="+i18n.t("shares.title",{lng: window.lang})+" %23ArtChallenge&description="+i18n.t("shares.description",{lng: window.lang})+"&image=http://artchallenge.me/pics/badges/winner-badge-"+window.lang+"-shareVK.png&noparse=true";
+  url = "http://vk.com/share.php?url=http://artchallenge.me/?utm_source=vk-win&title="+i18n.t("shares.title",{lng: window.lang})+" %23ArtChallenge&description="+i18n.t("shares.description",{lng: window.lang})+"&image=http://artchallenge.me/pics/badges/" + window.currentSetName + "/winner-badge-"+window.lang+"-shareVK.png&noparse=true";
   window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
   yaCounter24934448.reachGoal('WINNER-SHARE-VK');
 };  
@@ -409,7 +409,7 @@ function ShareOD() {
 };
 
 function ShareMM() {
-  url = "http://connect.mail.ru/share?url=http://artchallenge.me/?utm_source=mm-win&title="+i18n.t("shares.title",{lng: window.lang})+"&description="+i18n.t("shares.description",{lng: window.lang})+"&image_url=http://artchallenge.me/pics/badges/winner-badge-"+window.lang+"-shareVK.png";
+  url = "http://connect.mail.ru/share?url=http://artchallenge.me/?utm_source=mm-win&title="+i18n.t("shares.title",{lng: window.lang})+"&description="+i18n.t("shares.description",{lng: window.lang})+"&image_url=http://artchallenge.me/pics/badges/" + window.currentSetName + "/winner-badge-"+window.lang+"-shareVK.png";
   window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
   yaCounter24934448.reachGoal('WINNER-SHARE-MM');
 };
@@ -472,7 +472,7 @@ function changeSet(value) {
     switch(value) {
 
       case "allSet":
-        window.currentSet = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117];
+        window.currentSet = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118];
         setCookie('currentSet',value,360);
         break;
 
@@ -502,7 +502,7 @@ function changeSet(value) {
         break;
 
       default:
-        window.currentSet = [1,4,5,7,8,9,14,15,17,19,21,22,24,25,26,27,28,29,30,33,36,39,40,41,42,43,44,45,47,49,53,54,55,57,63,72,83,73,95,112];
+        window.currentSet = [1,4,5,7,8,9,14,15,17,19,21,22,24,25,26,27,28,29,30,33,36,39,40,41,42,43,44,45,47,49,53,54,55,57,63,72,83,73,95,112,118];
         document.cookie = "currentSet=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
     };
 
