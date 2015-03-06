@@ -132,8 +132,11 @@ function getart() {
           window.genre = window.genre + ", " + i18n.t("genre." + entry, { lng: window.lang });
         }
       });
-      putButtons(window.truePainterName);
-
+      if (window.truePainterName != "") {
+        putButtons(window.truePainterName);        
+      } else {
+        console.log("Error: window.truePainterName is empty");
+      }
     })
     .fail(function() {
       refresh("bad",false);
