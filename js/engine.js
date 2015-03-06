@@ -136,6 +136,10 @@ function getart() {
         putButtons(window.truePainterName);        
       } else {
         console.log("Error: window.truePainterName is empty");
+        setTimeout(function () {
+          clearVariables();
+          refresh("bad",false);
+        }, 1000);
       }
     })
     .fail(function() {
