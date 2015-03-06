@@ -135,9 +135,10 @@ function getart() {
       if (window.truePainterName != "") {
         putButtons(window.truePainterName);        
       } else {
-        console.log("Error: window.truePainterName is empty");
+        console.log("Error: window.truePainterName is empty, sleep for 1000");
+        art.src = "pics/loading.svg";
         setTimeout(function () {
-          clearVariables();
+          //clearVariables();
           refresh("bad",false);
         }, 1000);
       }
