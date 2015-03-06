@@ -162,6 +162,8 @@ function putButtons(painter) {
   for (var i=0;i<10;i++) {
     painters.push(randomPainter());
     if (painters[1] == "") {
+      console.log("Error from painters: do clearVariables + refresh(bad, false)");
+      clearVariables();
       refresh("bad",false);
     };
   };
@@ -515,5 +517,14 @@ function changeSet(value) {
     } else {
       window.currentSetName =value;
     }
-  }
-
+  };
+  
+function clearVariables() {
+  window.truePainter = null;
+  window.paintings = null;
+  window.image = null;
+  window.wiki = null;
+  window.years = null;
+  window.bio = null;
+  window.truePainterName = null;
+}
