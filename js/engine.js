@@ -400,16 +400,16 @@ function getShares() {
   case "ru":
     shares_old = "<a onclick='ShareVK();' href='#'> <span class='glyphicon glyphicon-share-alt'></span> ВКонтакте </a><br><a onclick='ShareFB();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Facebook </a><br><a onclick='ShareOD();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Одноклассники </a><br><a onclick='ShareMM();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Мой Мир </a>";
     shares = "<br><div style='padding: 15px'>\
-    <button type='button' class='btn btn-lg btn-primary' aria-label='ВКонтакте' onclick='ShareVK();'>\
+    <button type='button' class='btn btn-lg btn-primary btn-share' aria-label='ВКонтакте' onclick='ShareVK();'>\
      <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> ВКонтакте\
     </button>\
-    <button type='button' class='btn btn-lg btn-primary' aria-label='Facebook' onclick='ShareFB();'>\
+    <button type='button' class='btn btn-lg btn-primary btn-share' aria-label='Facebook' onclick='ShareFB();'>\
       <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Facebook\
     </button>\
-    <button type='button' class='btn btn-lg btn-warning' aria-label='Одноклассники' onclick='ShareOD();'>\
+    <button type='button' class='btn btn-lg btn-warning btn-share' aria-label='Одноклассники' onclick='ShareOD();'>\
       <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Одноклассники\
     </button>\
-    <button type='button' class='btn btn-lg btn-info' aria-label='Мой Мир' onclick='ShareTW();'>\
+    <button type='button' class='btn btn-lg btn-info btn-share' aria-label='Мой Мир' onclick='ShareTW();'>\
       <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Twitter\
     </button>\
     </div>";
@@ -418,17 +418,14 @@ function getShares() {
   default:
     shares_old = "<a onclick='ShareFB();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Facebook </a><br><a onclick='ShareTW();' href='#'> <span class='glyphicon glyphicon-share-alt'></span> Twitter </a><br><a onclick='ShareVK();' href='#'> <span class='glyphicon glyphicon-share-alt'></span> VKontakte </a>";
     shares = "<br><div style='padding: 15px'>\
-    <button type='button' class='btn btn-lg btn-primary' aria-label='Facebook' onclick='ShareFB();'>\
+    <button type='button' class='btn btn-lg btn-primary btn-share' aria-label='Facebook' onclick='ShareFB();'>\
       <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Facebook\
     </button>\
-    <!-- <button type='button' class='btn btn-lg btn-warning' aria-label='Одноклассники' onclick='ShareOD();'>\
-      <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Одноклассники\
-    </button>-->\
-    <button type='button' class='btn btn-lg btn-info' aria-label='Мой Мир' onclick='ShareTW();'>\
-      <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Twitter\
-    </button>\
-    <button type='button' class='btn btn-lg btn-primary' aria-label='VKontakte' onclick='ShareVK();'>\
+    <button type='button' class='btn btn-lg btn-primary btn-share' aria-label='VKontakte' onclick='ShareVK();'>\
      <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> VKontakte\
+    </button>\
+    <button type='button' class='btn btn-lg btn-info btn-share' aria-label='Мой Мир' onclick='ShareTW();'>\
+      <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Twitter\
     </button>\
     </div>";
     break;

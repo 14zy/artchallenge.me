@@ -129,7 +129,9 @@
   text-decoration: none;
 }
 
-
+.sets {
+  margin-top: -16px;
+}
 
 .sets-ul {
   width: 500px;
@@ -192,9 +194,8 @@
     padding: 5px 0 5px 0;
   }
   
-  .btn-lg {
-    padding: 7px;
-    margin: 2px;
+  .btn-share {
+    margin: 2px; 
     font-size: 14px;
   }
       
@@ -300,6 +301,13 @@
     font-size: 16px;
   }
   
+  .sets {
+    margin-right: -15px;
+  }
+  
+  .allSet-count {
+    display: none;
+  }
   
   
 }
