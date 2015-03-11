@@ -355,7 +355,7 @@ function badPhrase() {
 
 
 function winner() {
-  
+
   var winnerDiv = "\
   <a onclick='ShareFB();' href='#'>\
     <img style='width: 90%; max-height: 350px' src=pics/badges/" + window.currentSetName + "/winner-badge-"+window.lang+"-shareFB.png>\
@@ -364,7 +364,7 @@ function winner() {
   <text>" + i18n.t("message.winner-desc", { lng: window.lang, setName: i18n.t("sets." + window.currentSetName, { lng: window.lang }) }) + "\
   <br>\
   " + i18n.t("message.share", { lng: window.lang }) + "</text>" + getShares();
-    
+
   window.msgWinner = new PNotify({
       title: i18n.t("message.winner", { lng: window.lang }),
       text: winnerDiv,
@@ -385,12 +385,12 @@ function winner() {
   });
   document.getElementById("icon10").style.color = "rgb(53,115,45)";
   yaCounter24934448.reachGoal('WINNER');
-  
+
   document.getElementById("btn1").onclick = function() { void(0);};
   document.getElementById("btn2").onclick = function() { void(0);};
   document.getElementById("btn3").onclick = function() { void(0);};
   document.getElementById("btn4").onclick = function() { void(0);};
-  
+
 };
 
 function getShares() {
@@ -433,7 +433,6 @@ function getShares() {
   
   return shares;
 };
-
 
 function ShareFB() {
   url = "https://www.facebook.com/dialog/feed?app_id=263690153811188&display=popup&link=http://artchallenge.me/?utm_source=fb-win&redirect_uri=http://artchallenge.me/1.html&picture=http://artchallenge.me/pics/badges/" + window.currentSetName + "/winner-badge-"+window.lang+"-shareFB.png&source=http://artchallenge.me/pics/badges/" + window.currentSetName + "/winner-badge-"+window.lang+"-shareFB.png&name="+i18n.t("shares.title",{lng: window.lang})+"&caption="+i18n.t("shares.caption",{lng: window.lang})+"&description="+i18n.t("shares.description",{lng: window.lang});      
@@ -558,7 +557,7 @@ function changeSet(value) {
     };
 
     document.getElementById(value).className="lang-active";
-    
+
     if (window.currentSetName != null) {
       document.getElementById(window.currentSetName).className="lang";
       window.currentSetName =value;
@@ -566,9 +565,9 @@ function changeSet(value) {
     } else {
       window.currentSetName =value;
     }
-    
+
     if (window.msgWinner) { // Временно. Если была победа, а потом чувак выбирает новую коллекцию - просто перезагрузка страницы
       location.reload();
     }
   };
-  
+
