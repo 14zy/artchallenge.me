@@ -30,7 +30,8 @@
     "genre": "Genres",
     "learn-more": "Savoir plus",
     "winner": "Félicitations!",
-    "winner-desc": "Vous êtes un connaisseur de l'art!<br>10 sur 10 - c' est mieux que 82% des gens qui ont joué ce jeu!",
+    "winner-desc": "Коллекция <strong>__setName__</strong> пройдена!",
+    "winner-desc-old": "Vous êtes un connaisseur de l'art!<br>10 sur 10 - c' est mieux que 82% des gens qui ont joué ce jeu!",
     "share": "Vous pouvez parler de votre victoire dans les réseaux sociaux:"
   },
   "badPhrases": {

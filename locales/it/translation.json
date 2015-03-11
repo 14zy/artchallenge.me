@@ -31,7 +31,8 @@
     "genre": "Pittura di genere",
     "learn-more": "Saperne di più",
     "winner": "Augurissimi!",
-    "winner-desc": "Lei è perfettamente versato/a nell'arte!<br>10 su 10 – è meglio del 82% delle persone che hanno partecipato a questo gioco!",
+    "winner-desc": "Коллекция <strong>__setName__</strong> пройдена!",
+    "winner-desc-old": "Lei è perfettamente versato/a nell'arte!<br>10 su 10 – è meglio del 82% delle persone che hanno partecipato a questo gioco!",
     "share": "Può condividere la Sua vittoria nelle reti sociali:"
   },
   "badPhrases": {

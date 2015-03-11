@@ -353,15 +353,27 @@ function badPhrase() {
   return phrase;      
 };
 
+
 function winner() {
-  new PNotify({
+  
+  var winnerDiv = "\
+  <a onclick='ShareFB();' href='#'>\
+    <img style='width: 90%; max-height: 350px' src=pics/badges/" + window.currentSetName + "/winner-badge-"+window.lang+"-shareFB.png>\
+  </a>\
+  <br><br>\
+  <text>" + i18n.t("message.winner-desc", { lng: window.lang, setName: i18n.t("sets." + window.currentSetName, { lng: window.lang }) }) + "\
+  <br>\
+  " + i18n.t("message.share", { lng: window.lang }) + "</text>" + getShares();
+    
+  window.msgWinner = new PNotify({
       title: i18n.t("message.winner", { lng: window.lang }),
-      text: i18n.t("message.winner-desc", { lng: window.lang }) + "<br><br><a onclick='ShareFB();' href='#'><img style='margin-left: 25px;' width='230px' src=pics/badges/" + window.currentSetName + "/winner-badge-"+window.lang+".png></a><br><br><text style='font-size: 16px;'>" + i18n.t("message.share", { lng: window.lang }) + "<br>" + getShares() + "</text>",
+      text: winnerDiv,
       type: 'note',
       hide: false,
       animate_speed: "normal",
-      icon: "glyphicon glyphicon-thumbs-up",
-      addclass: window.pnotify,
+      icon: false,
+      addclass: "stack-winner",
+      opacity: 0.95,
       buttons: {
         closer: true,
         sticker: false
@@ -373,6 +385,12 @@ function winner() {
   });
   document.getElementById("icon10").style.color = "rgb(53,115,45)";
   yaCounter24934448.reachGoal('WINNER');
+  
+  document.getElementById("btn1").onclick = function() { void(0);};
+  document.getElementById("btn2").onclick = function() { void(0);};
+  document.getElementById("btn3").onclick = function() { void(0);};
+  document.getElementById("btn4").onclick = function() { void(0);};
+  
 };
 
 function getShares() {
@@ -380,11 +398,39 @@ function getShares() {
   switch (window.lang)
   {
   case "ru":
-    shares = "<a onclick='ShareVK();' href='#'> <span class='glyphicon glyphicon-share-alt'></span> ВКонтакте </a><br><a onclick='ShareFB();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Facebook </a><br><a onclick='ShareOD();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Одноклассники </a><br><a onclick='ShareMM();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Мой Мир </a>";
+    shares_old = "<a onclick='ShareVK();' href='#'> <span class='glyphicon glyphicon-share-alt'></span> ВКонтакте </a><br><a onclick='ShareFB();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Facebook </a><br><a onclick='ShareOD();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Одноклассники </a><br><a onclick='ShareMM();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Мой Мир </a>";
+    shares = "<br><div style='padding: 15px'>\
+    <button type='button' class='btn btn-lg btn-primary' aria-label='ВКонтакте' onclick='ShareVK();'>\
+     <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> ВКонтакте\
+    </button>\
+    <button type='button' class='btn btn-lg btn-primary' aria-label='Facebook' onclick='ShareFB();'>\
+      <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Facebook\
+    </button>\
+    <button type='button' class='btn btn-lg btn-warning' aria-label='Одноклассники' onclick='ShareOD();'>\
+      <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Одноклассники\
+    </button>\
+    <button type='button' class='btn btn-lg btn-info' aria-label='Мой Мир' onclick='ShareTW();'>\
+      <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Twitter\
+    </button>\
+    </div>";
     break;
       
   default:
-    shares = "<a onclick='ShareFB();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Facebook </a><br><a onclick='ShareTW();' href='#'> <span class='glyphicon glyphicon-share-alt'></span> Twitter </a><br><a onclick='ShareVK();' href='#'> <span class='glyphicon glyphicon-share-alt'></span> VKontakte </a>";
+    shares_old = "<a onclick='ShareFB();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Facebook </a><br><a onclick='ShareTW();' href='#'> <span class='glyphicon glyphicon-share-alt'></span> Twitter </a><br><a onclick='ShareVK();' href='#'> <span class='glyphicon glyphicon-share-alt'></span> VKontakte </a>";
+    shares = "<br><div style='padding: 15px'>\
+    <button type='button' class='btn btn-lg btn-primary' aria-label='Facebook' onclick='ShareFB();'>\
+      <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Facebook\
+    </button>\
+    <!-- <button type='button' class='btn btn-lg btn-warning' aria-label='Одноклассники' onclick='ShareOD();'>\
+      <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Одноклассники\
+    </button>-->\
+    <button type='button' class='btn btn-lg btn-info' aria-label='Мой Мир' onclick='ShareTW();'>\
+      <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Twitter\
+    </button>\
+    <button type='button' class='btn btn-lg btn-primary' aria-label='VKontakte' onclick='ShareVK();'>\
+     <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> VKontakte\
+    </button>\
+    </div>";
     break;
   };
   
@@ -515,7 +561,7 @@ function changeSet(value) {
     };
 
     document.getElementById(value).className="lang-active";
-
+    
     if (window.currentSetName != null) {
       document.getElementById(window.currentSetName).className="lang";
       window.currentSetName =value;
@@ -523,4 +569,9 @@ function changeSet(value) {
     } else {
       window.currentSetName =value;
     }
+    
+    if (window.msgWinner) { // Временно. Если была победа, а потом чувак выбирает новую коллекцию - просто перезагрузка страницы
+      location.reload();
+    }
   };
+  
