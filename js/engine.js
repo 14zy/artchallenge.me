@@ -58,7 +58,7 @@ function load() {
   window.platform = "http://artchallenge.me/painters/"; //"http://artchallenge.me/painters/"; // "painters/";
   document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
 
-  window.errorDelay = 3500;
+  window.errorDelay = 6000;
   window.pnotify = "";
   //js magic for mobiles
   if (window.innerWidth <= 600) {
@@ -253,12 +253,12 @@ if (answer == window.truePainterName) {
 
 else {
 
-  setTimeout(function() {refresh("bad");}, 4000)
+  setTimeout(function() {refresh("bad");}, 6000)
   window.msgWrong = new PNotify({
       title: badPhrase(),
-      text: "<div style='text-align: left'>" + "<img src='" + window.platform + window.truePainter + "/photo.jpg' style='width: 60%; margin: 10px 0 10px 0'><br><p style='font-size: 18px'>" + i18n.t("message.wrong-desc", { lng: window.lang }) + " " + window.truePainterName + "!</p><a id='btnLearnMore' onTouchStart='learnMore();' onclick='learnMore();' class='btn btn-primary'><span class='glyphicon glyphicon-search'></span> " + i18n.t("message.learn-more", { lng: window.lang }) + "</a><br></div>", //<hr><p>Обещаю выучить все произведения данного художника<br><br><a style='margin: 5px;' class='btn btn-success'><span class='glyphicon glyphicon-share-alt'></span> Дать обещание</a></p></div>
+      text: "<div style='text-align: left'>" + "<img src='" + window.platform + window.truePainter + "/photo.jpg' style='width: 60%; margin: 10px 0 10px 0'><br><p style='font-size: 18px'>" + i18n.t("message.wrong-desc", { lng: window.lang }) + " " + window.truePainterName + "!<hr style='margin: 5px'>"+i18n.t("message.years", { lng: window.lang })+ ": " + window.years + "<br>"+i18n.t("message.genre", { lng: window.lang })+": " + window.genre + "<br>"+i18n.t("message.nationality", { lng: window.lang })+": " + window.nation + "</p><a id='btnLearnMore' onTouchStart='learnMore();' onclick='learnMore();' class='btn btn-primary'><span class='glyphicon glyphicon-search'></span> " + i18n.t("message.learn-more", { lng: window.lang }) + "</a><br></div>", //<hr><p>Обещаю выучить все произведения данного художника<br><br><a style='margin: 5px;' class='btn btn-success'><span class='glyphicon glyphicon-share-alt'></span> Дать обещание</a></p></div>
       type: 'error',
-      icon: 'glyphicon glyphicon-remove',
+      icon: '',
       hide: true,
       animate_speed: "normal",
       delay: window.errorDelay,
@@ -267,6 +267,7 @@ else {
       mouse_reset: false,
       buttons: {
         closer: true,
+        closer_hover: false,
         sticker: false
       },
       history: {
