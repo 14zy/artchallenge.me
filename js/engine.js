@@ -68,7 +68,7 @@ function load() {
 
   if (getCookie("currentSet") == "") {
     window.currentSetName="basicSet";
-    window.currentSet = [1,4,5,7,8,9,14,15,17,19,21,22,24,25,26,27,28,29,30,33,36,39,40,41,42,43,44,45,47,49,53,54,55,57,63,72,83,73,95,112,118];
+    window.currentSet = [1,4,7,9,14,15,17,19,21,22,24,26,27,28,29,30,32,33,34,35,36,39,40,41,42,43,45,46,49,50,53,54,55,57,58,61,62,63,69,73,75,77,79,80,82,83,94,95,112,118];
     document.getElementById("basicSet").className="lang-active";
   } else {
     changeSet(getCookie("currentSet"));  
@@ -527,7 +527,7 @@ function changeSet(value) {
         break;
 
       case "impressionismSet":
-        window.currentSet = [2,3,9,10,14,16,17,21,30,36,49,53,57,60,61,69,77,84,94,96];
+        window.currentSet = [2,3,9,16,17,21,30,36,49,53,57,60,61,69,77,84,94,96];
         setCookie('currentSet',value,360);
         break;
 
@@ -537,7 +537,7 @@ function changeSet(value) {
         break;
 
       case "realismSet":
-        window.currentSet = [3,5,8,17,18,25,37,47,48,58,60,65,67,84,85,113,116,117];
+        window.currentSet = [5,8,18,25,37,47,48,58,85,113,116,117];
         setCookie('currentSet',value,360);
         break;
         
@@ -552,7 +552,7 @@ function changeSet(value) {
         break;
 
       default:
-        window.currentSet = [1,4,5,7,8,9,14,15,17,19,21,22,24,25,26,27,28,29,30,33,36,39,40,41,42,43,44,45,47,49,53,54,55,57,63,72,83,73,95,112,118];
+        window.currentSet = [1,4,7,9,14,15,17,19,21,22,24,26,27,28,29,30,32,33,34,35,36,39,40,41,42,43,45,46,49,50,53,54,55,57,58,61,62,63,69,73,75,77,79,80,82,83,94,95,112,118];
         document.cookie = "currentSet=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
     };
 

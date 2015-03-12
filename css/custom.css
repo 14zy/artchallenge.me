@@ -152,6 +152,11 @@
   padding: 7px 0 7px 0;
 }
 
+.allSet-count {
+  float: right;
+}
+
+
 
 .up { bottom:100% !important; top:auto !important; }
 
