@@ -242,7 +242,7 @@
   },
   "sets": {
     "basicSet": "Popular painters",
-    "basicSet-desc": "Коллекция, состоящая из самых известных художников.",
+    "basicSet-desc": "Set of the most famous painters",
     "basicSet-count": "50 painters, 8 450 paintings",
     "renaissanceSet": "Renaissance",
     "renaissanceSet-desc": "От Северного Возрождения и Проторенессанса к полотнам Высокого Возрождения.",

@@ -111,7 +111,7 @@ function getart() {
         window.bio = json.bio.ru;
       };
       if (window.bio == "") {
-        window.bio = "Просим не гневаться, но биография художника временно отсутствует, если вы знаете хороший источник, пожалуйста, сообщите нам на <a href='mailto:report@artchallenge.ru'>report@artchallenge.ru</a>.<br><br>Sorry, but biography is not available for this painter, if you have a good one, please contact us at <a href='mailto:report@artchallenge.ru'>report@artchallenge.ru</a>."
+        window.bio = "Просим не гневаться, но биография этого художника временно отсутствует; ежели Вам известен хороший источник, будьте так любезны, сообщите его нам: <a href='mailto:report@artchallenge.ru'>report@artchallenge.ru</a>.<br><br>We beg your pardon, but temporary this painter's biography is not available; if you know the good source, please contact us: <a href='mailto:report@artchallenge.ru'>report@artchallenge.ru</a>."
       };
 
       window.truePainterName = i18n.t("painters." + truePainter, { lng: window.lang });
