@@ -96,8 +96,12 @@ function getart() {
       window.paintings = json.paintings;
       window.image = Math.floor((Math.random()*window.paintings)+1);
 
-      art.src = window.platform + truePainter + "/" + window.image + ".jpg";
-
+      if (window.pnotify == "stack-mobile") {
+        art.src = window.platform + truePainter + "/thumbnails/" + window.image + ".jpg";        
+      } else {
+        art.src = window.platform + truePainter + "/" + window.image + ".jpg";
+      };
+      
       window.link = json.link.local;
       if (window.lang == "ru") { //Временно, пока в json не будут ссылки на википедию на всех языках
         window.wiki = json.link.wikipedia.ru;
@@ -136,7 +140,7 @@ function getart() {
         putButtons(window.truePainterName);        
       } else {
         console.log("Error: window.truePainterName is empty, sleep for 1000 and retry");
-        art.src = "pics/loading.svg";
+        art.src = "pics/loading.gif";
         setTimeout(function () {
           refresh("bad",false);
         }, 1000);
@@ -480,7 +484,7 @@ function refresh(sign,scroll){
   document.getElementById("btn4").style.background = "";
   document.getElementById("btn4").style.borderColor = "";
 
-  document.getElementById("art").src = "pics/loading.svg";
+  document.getElementById("art").src = "pics/loading.gif";
   if (scroll != false) {
     $("html, body").animate({ scrollTop: 90 }, "slow");
   }
