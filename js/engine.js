@@ -229,15 +229,15 @@ if (answer == window.truePainterName) {
   else {
   wins = 1 + wins;
   setCookie('wins',wins,"session");
-  setTimeout(function() {refresh("good");}, 1000)
+  setTimeout(function() {refresh("good");}, 2000)
   
   new PNotify({
-      title: i18n.t("message.right", { lng: window.lang }),
-      text: i18n.t("message.right-desc", { lng: window.lang, count: parseInt(window.counter) }),
+      title: goodPhrase(),
+      text: "<div style='text-align: left'>" + "<img src='" + window.platform + window.truePainter + "/photo.jpg' style='width: 60%; margin: 10px 0 10px 0'><br><p style='font-size: 16px'>" + window.truePainterName + "</p><hr style='margin: 5px'>" + i18n.t("message.right-desc", { lng: window.lang, count: parseInt(window.counter) }),
       type: 'success',
       hide: true,
       animate_speed: "normal",
-      delay: 2000,
+      delay: 3000,
       remove: true,
       addclass: window.pnotify,
       buttons: {
@@ -355,6 +355,13 @@ function badPhrase() {
     var phrase = "badPhrases." + Math.floor((Math.random()*12)+1)
     phrase = i18n.t(phrase, { lng: window.lang });
   };
+  return phrase;      
+};
+
+
+function goodPhrase() {
+    var phrase = "goodPhrases." + Math.floor((Math.random()*12)+1)
+    phrase = i18n.t(phrase, { lng: window.lang });
   return phrase;      
 };
 
