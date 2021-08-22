@@ -55,7 +55,7 @@ function load() {
     setLang(lang);
   };
 
-  window.platform = "http://artchallenge.me/painters/"; //"http://artchallenge.me/painters/"; // "painters/";
+  window.platform = "https://artchallenge.me/painters/"; //"http://artchallenge.me/painters/"; // "painters/";
   document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
 
   window.errorDelay = 6000;
@@ -446,31 +446,31 @@ function getShares() {
 };
 
 function ShareFB() {
-  url = "https://www.facebook.com/dialog/feed?app_id=263690153811188&display=popup&link=http://artchallenge.me/?utm_source=fb-win&redirect_uri=http://artchallenge.me/1.html&picture=http://artchallenge.me/pics/badges/" + window.currentSetName + "/winner-badge-"+window.lang+"-shareFB.png&source=http://artchallenge.me/pics/badges/" + window.currentSetName + "/winner-badge-"+window.lang+"-shareFB.png&name="+i18n.t("shares.title",{lng: window.lang})+"&caption="+i18n.t("shares.caption",{lng: window.lang})+"&description="+i18n.t("shares.description",{lng: window.lang});      
+  url = "https://www.facebook.com/dialog/feed?app_id=263690153811188&display=popup&link=https://artchallenge.me/?utm_source=fb-win&redirect_uri=https://artchallenge.me/1.html&picture=https://artchallenge.me/pics/badges/" + window.currentSetName + "/winner-badge-"+window.lang+"-shareFB.png&source=https://artchallenge.me/pics/badges/" + window.currentSetName + "/winner-badge-"+window.lang+"-shareFB.png&name="+i18n.t("shares.title",{lng: window.lang})+"&caption="+i18n.t("shares.caption",{lng: window.lang})+"&description="+i18n.t("shares.description",{lng: window.lang});      
   window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
   yaCounter24934448.reachGoal('WINNER-SHARE-FB');
 };
 
 function ShareTW() {
-  url = "http://twitter.com/share?text="+i18n.t("shares.title",{lng: window.lang})+" http://artchallenge.me/pics/badges/" + window.currentSetName + "/winner-badge-"+window.lang+"-shareTW.png &url=http://artchallenge.me/&hashtags=artchallenge";
+  url = "https://twitter.com/share?text="+i18n.t("shares.title",{lng: window.lang})+" https://artchallenge.me/pics/badges/" + window.currentSetName + "/winner-badge-"+window.lang+"-shareTW.png &url=https://artchallenge.me/&hashtags=artchallenge";
   window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
   yaCounter24934448.reachGoal('WINNER-SHARE-TW');
 };
 
 function ShareVK() {
-  url = "http://vk.com/share.php?url=http://artchallenge.me/?utm_source=vk-win&title="+i18n.t("shares.title",{lng: window.lang})+" %23ArtChallenge&description="+i18n.t("shares.description",{lng: window.lang})+"&image=http://artchallenge.me/pics/badges/" + window.currentSetName + "/winner-badge-"+window.lang+"-shareVK.png&noparse=true";
+  url = "https://vk.com/share.php?url=https://artchallenge.me/?utm_source=vk-win&title="+i18n.t("shares.title",{lng: window.lang})+" %23ArtChallenge&description="+i18n.t("shares.description",{lng: window.lang})+"&image=https://artchallenge.me/pics/badges/" + window.currentSetName + "/winner-badge-"+window.lang+"-shareVK.png&noparse=true";
   window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
   yaCounter24934448.reachGoal('WINNER-SHARE-VK');
 };  
 
 function ShareOD() {
-  url = "http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1&st.comments=Господа, я отлично разбираюсь в искусстве!&st._surl=http://artchallenge.me/?utm_source=od-win";
+  url = "https://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1&st.comments=Господа, я отлично разбираюсь в искусстве!&st._surl=https://artchallenge.me/?utm_source=od-win";
   window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
   yaCounter24934448.reachGoal('WINNER-SHARE-OD');
 };
 
 function ShareMM() {
-  url = "http://connect.mail.ru/share?url=http://artchallenge.me/?utm_source=mm-win&title="+i18n.t("shares.title",{lng: window.lang})+"&description="+i18n.t("shares.description",{lng: window.lang})+"&image_url=http://artchallenge.me/pics/badges/" + window.currentSetName + "/winner-badge-"+window.lang+"-shareVK.png";
+  url = "https://connect.mail.ru/share?url=https://artchallenge.me/?utm_source=mm-win&title="+i18n.t("shares.title",{lng: window.lang})+"&description="+i18n.t("shares.description",{lng: window.lang})+"&image_url=https://artchallenge.me/pics/badges/" + window.currentSetName + "/winner-badge-"+window.lang+"-shareVK.png";
   window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
   yaCounter24934448.reachGoal('WINNER-SHARE-MM');
 };
